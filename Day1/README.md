@@ -245,3 +245,12 @@ docker pull hello-world:latest
 
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/f62c5e79-98bc-447d-8996-58e0f25d5c0b)
+
+
+## Lab - Deleting a docker image from Local Docker Registry
+```
+docker rmi hello-world:latest
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/8b58a9e2-4cc5-49d6-b7f4-a3fd927788b7)

@@ -155,3 +155,12 @@ tektutor/ansible-ubuntu-node   latest     a3f39aea7460   2 days ago      220MB
 centos                         7.9.2009   eeb6ee3f44bd   23 months ago   204MB
 ubuntu                         16.04      b6f507652425   2 years ago     135MB  
 </pre>
+
+## Lab - Docker Remote Registry
+Open the below URL on your Ubuntu Cloud machine chrome web browser
+```
+https://hub.docker.com
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/b1f1c9b8-c1ed-4ae4-97f0-8bf2229ae44c)

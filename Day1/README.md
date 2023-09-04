@@ -113,7 +113,7 @@ sudo systemctl status docker
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/98e82f0e-51fa-4627-9860-2dbe3fb5c9d8)
 
-  
+   
 ## What is Docker?
 - is an application virtualization technology
 - each container represents one application
@@ -287,6 +287,13 @@ docker run -dit --name ubuntu1 --hostname ubuntu1 ubuntu:22.04 /bin/bash
 docker ps
 docker ps -a
 ```
+
+Let's understand the above run command
+<pre>
+run - creates and start the container
+dit - means deattached/backgorund and it stands for interactive terminal
+</pre>
+
 
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/95076b1f-209a-48b1-89b1-6f61029cfa8a)

@@ -375,3 +375,17 @@ docker rm -f $(docker ps -aq)
 
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/8141e367-8857-4ae4-b2c6-ed57fb50144f)
+
+## Lab - Setup a LoadBalancer with 3 nginx web servers - Port Forwarding
+
+First let's create 3 web server containers uging nginx:latest docker image
+```
+docker ps
+docker run -d --name web1 --hostname web1 nginx:latest
+docker run -d --name web2 --hostname web2 nginx:latest
+docker run -d --name web3 --hostname web3 nginx:latest
+docker ps
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/5a059be6-5bbf-4bc8-b893-8d43c568ffcb)

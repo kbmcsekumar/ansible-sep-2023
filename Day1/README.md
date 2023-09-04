@@ -390,3 +390,11 @@ docker ps
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/5a059be6-5bbf-4bc8-b893-8d43c568ffcb)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/c7a54471-ce8b-4b40-8b25-7c13b89a9e2b)
+
+Let's create the load balancer container with port forward to make it accessible from other machines in the same network
+```
+docker run -d --name lb --hostname lb -p 8001:80 nginx:latest
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/47ba2277-e23a-4079-b557-bb321f3f1ec7)

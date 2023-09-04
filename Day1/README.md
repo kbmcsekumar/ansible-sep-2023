@@ -337,3 +337,4 @@ docker image inspect ubuntu:16.04
 
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/e4cf1aef-d1ab-488d-94b2-8ce3536357d9)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/437b5236-220e-49a4-8d82-c51cd2a71369)

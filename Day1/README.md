@@ -363,3 +363,15 @@ docker ps
 
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/fed4d30e-9c3a-47e4-8f19-576750b59430)
+
+
+## Lab - Deleting multiple containers without calling out their names individually
+```
+docker ps
+docker ps -q
+docker ps -aq
+docker rm -f $(docker ps -aq)
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/8141e367-8857-4ae4-b2c6-ed57fb50144f)

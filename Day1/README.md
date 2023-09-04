@@ -157,7 +157,7 @@ ubuntu                         16.04      b6f507652425   2 years ago     135MB
 </pre>
 
 ## Lab - Docker Remote Registry
-Open the below URL on your Ubuntu Cloud machine chrome web browser
+Open the below URL on your Ubuntu Cloud machine chrome web browser, click on Exlore
 ```
 https://hub.docker.com
 ```

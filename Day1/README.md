@@ -454,3 +454,15 @@ docker cp index.html web3:/usr/share/nginx/html/index.html
 
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/b97146d5-72c5-43c3-b248-ab078cb5cc1f)
+
+You should able to test the loadbalancer by access the below URL from ubuntu web browser
+```
+http://localhost:8001
+http://localhost:8001
+http://localhost:8001
+```
+
+Expected output is each time you browse, it route the calls in round robin fashion
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/b7a04cd8-eb3a-4981-b7a7-287cb1bd52cc)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/4837c427-eb8c-4ad3-a177-077d6d687760)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/f2a2cf91-509c-434b-9ec4-f88426bd8cf7)

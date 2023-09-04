@@ -438,3 +438,19 @@ docker ps
 
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/967e0099-44bd-4f4d-8531-baa0aee07d55)
+
+Let's create a custom html page and copy them to web1, web2 and web3 to differentiate which web server is responding to our request from lb
+```
+echo "Nginx Web Server1" > index.html
+docker cp index.html web1:/usr/share/nginx/html/index.html
+
+echo "Nginx Web Server2" > index.html
+docker cp index.html web2:/usr/share/nginx/html/index.html
+
+echo "Nginx Web Server1" > index.html
+docker cp index.html web3:/usr/share/nginx/html/index.html
+
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/b97146d5-72c5-43c3-b248-ab078cb5cc1f)

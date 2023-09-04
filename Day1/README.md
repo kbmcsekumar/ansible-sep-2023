@@ -298,3 +298,15 @@ dit - means deattached/backgorund and it stands for interactive terminal
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/95076b1f-209a-48b1-89b1-6f61029cfa8a)
 
+## Lab - Getting inside a container shell
+```
+docker exec -it ubuntu1 /bin/bash
+ls
+hostname
+hostname -i
+exit
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/c3e608ae-a8a9-4c2a-b094-e2a18dd3fedd)
+

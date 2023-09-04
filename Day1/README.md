@@ -17,7 +17,6 @@ sudo apt install -y net-tools iputils-ping
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/2d9ba90e-b01d-4598-ad77-d0823e03aebe)
 
-
 # Docker Overview
 
 ## What are Bootloaders?
@@ -144,6 +143,43 @@ Expected output
 ## Containers
 - is a running instance of Docker Image
 - containers get IP address, file system, network stack
+
+## Linux Kernal Features that enables the Container technology
+1. Namespace - containers running on same machines are isolated by using namespace
+2. Control Groups (CGroups)
+   - we can apply resource quota restricts for each containers
+   - we can restrict
+     - how many CPU cores a container can use at the max
+     - how much RAM a container can use at the max
+     - how much storage a container can use at the max
+
+## How containers are different from normal application process
+- containers also are normal application process, the only thing is it runs in a separate network namespace
+- 
+
+## Why Docker?
+- high-level user-friendly software that makes things easier to manage images and containers
+- internally docker depends on containerd
+- containerd internally depends on container runtime called runC
+
+## What is a Container Engine?
+- a user-friendly high-level software that uses other tools to manage container images/containers
+- Examples
+  - Docker
+  - Podman
+
+## What is a Container Runtime?
+- is a softwares that manages containers
+  - create a container
+  - list containers
+  - delete containers
+  - stop/start/restart/kill/abort containers
+- container runtimes are low-level software utility which are not user-friendly, hence they
+  are not normally used by end-users
+- these software are used by Container engines to manage containers
+Examples
+- runc
+- CRI-O
 
 ## Hypervisor High-Level Architecture
 

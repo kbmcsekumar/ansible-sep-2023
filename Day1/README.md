@@ -104,10 +104,13 @@ Expected output
 
 You need to restart docker service to apply the config changes
 ```
-sudo systemctl-daemon reload
+sudo systemctl daemon-reload
 sudo systemctl restart docker
 sudo systemctl status docker
 ```
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/98e82f0e-51fa-4627-9860-2dbe3fb5c9d8)
+
 
   
 ## What is Docker?

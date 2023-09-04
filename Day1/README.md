@@ -389,3 +389,4 @@ docker ps
 
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/5a059be6-5bbf-4bc8-b893-8d43c568ffcb)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/c7a54471-ce8b-4b40-8b25-7c13b89a9e2b)

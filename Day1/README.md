@@ -349,3 +349,17 @@ docker ps
 
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/b5ec82c1-31f9-4b52-9b56-fa82c393bfb7)
+
+
+## Lab - Deleting containers
+```
+docker ps
+docker stop c2
+docker rm c2
+
+docker rm -f ubuntu1
+docker ps
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/fed4d30e-9c3a-47e4-8f19-576750b59430)

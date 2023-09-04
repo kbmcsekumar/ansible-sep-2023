@@ -164,3 +164,11 @@ https://hub.docker.com
 
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/b1f1c9b8-c1ed-4ae4-97f0-8bf2229ae44c)
+
+## Lab - Downloading the hello-world docker image from Docker Hub Remote Registry to your local docker registry
+```
+docker pull hello-world:latest
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/f62c5e79-98bc-447d-8996-58e0f25d5c0b)

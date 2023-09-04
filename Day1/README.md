@@ -4,6 +4,7 @@
 - Kindly provide your full name and personal email id while registering for the pre-test
 - Once you complete the pre-test, kindly confirm me either orally or leave a message via WebEx chat if you have access
   to WebEx chat
+- Once everyone completes the pre-test we can start the training until then I'll be on mute
     
 <pre>
 https://app.mymapit.in/code4/tiny/VxOr50  

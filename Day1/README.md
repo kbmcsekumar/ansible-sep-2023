@@ -447,7 +447,7 @@ docker cp index.html web1:/usr/share/nginx/html/index.html
 echo "Nginx Web Server2" > index.html
 docker cp index.html web2:/usr/share/nginx/html/index.html
 
-echo "Nginx Web Server1" > index.html
+echo "Nginx Web Server3" > index.html
 docker cp index.html web3:/usr/share/nginx/html/index.html
 
 ```

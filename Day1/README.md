@@ -125,6 +125,25 @@ Expected output
 - each container has a file system
 
 ## Hypervisor vs Docker
+- Virtual Machine represents an Operating System
+- Container represents an application process
+- Virtual machine gets its own hardware resources (CPU,RAM,Disk,etc)
+- Containers running on the same system shares the Hardware resources on the underlying OS
+- Container technolgy is an application virtualization technology
+- container is light-weight virtualization technology
+- Virtualization is heavy-weight - because each VM requires dedicated hardware resources
+- Containers need Operating System
+- containers are not a replacement for Virtualization(Virtual Machines)
+- they both can be used together, they are complementing technology
+
+## Container Images
+- specification of docker containers
+- any software tools that you need on the containers must be installed on the Container image
+- any number of containers can be creating using a Docker Image
+
+## Containers
+- is a running instance of Docker Image
+- containers get IP address, file system, network stack
 
 ## Hypervisor High-Level Architecture
 

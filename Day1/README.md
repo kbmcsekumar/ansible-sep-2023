@@ -279,3 +279,15 @@ docker ps -a
 
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/32c308c7-e655-445f-9c76-54fe35fbc7d1)
+
+## Lab - Creating container and run them in background
+```
+docker run -dit --name ubuntu1 --hostname ubuntu1 ubuntu:22.04 /bin/bash
+docker run -dit --name ubuntu1 --hostname ubuntu1 ubuntu:22.04 /bin/bash
+docker ps
+docker ps -a
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/95076b1f-209a-48b1-89b1-6f61029cfa8a)
+

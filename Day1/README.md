@@ -181,6 +181,14 @@ Examples
 - runc
 - CRI-O
 
+## What type of applications can be containerized?
+- Web Servers
+- Application Servers
+- DB Servers
+- REST API
+- SOAP API
+- Microservices
+
 ## Hypervisor High-Level Architecture
 
 ## Docker High-Level Architecture

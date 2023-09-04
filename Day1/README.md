@@ -92,10 +92,14 @@ Check the status of docker service to find the path of docker service configurat
 sudo systemctl status docker
 ```
 Expected output
-![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/d8a56e35-f1ec-4b7e-bbaf-6ce5bac1e286)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/507c9c31-20b0-4522-9c91-3d3720cdeb1d)
 
 
 You can edit the /lib/systemd/system/docker.service file as Administrator and append tcp://0.0.0.0:4243 at line 13 as shown below
+```
+sudo vim /lib/systemd/system/docker.service
+```
+Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/545d9fbc-db55-418e-ab18-dc74578cf819)
 
 

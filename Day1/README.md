@@ -343,7 +343,8 @@ Expected output
 ```
 docker rename <current-container-name> <new-name>
 docker ps
-docker rename ubuntu2 c2
+docker rename ubuntu2 c25a18dbd4922c   nginx:latest   "/docker-entrypoint.…"   9 minutes ago    Up 1 second     0.0.0.0:8001->80/tcp, :::8001->80/tcp   lb
+
 docker ps
 ```
 
@@ -390,6 +391,18 @@ docker ps
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/5a059be6-5bbf-4bc8-b893-8d43c568ffcb)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/c7a54471-ce8b-4b40-8b25-7c13b89a9e2b)
+
+Let's find the IP addresses of web1, web2 and web3
+```
+docker inspect web1 | grep IPA
+docker inspect -f {{.NetworkSettings.IPAddress}} web1
+docker inspect -f {{.NetworkSettings.IPAddress}} web2
+docker inspect -f {{.NetworkSettings.IPAddress}} web3
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/fe9d4595-f012-4f31-a5a1-84a38287a085)
+
 
 Let's create the load balancer container with port forward to make it accessible from other machines in the same network
 ```

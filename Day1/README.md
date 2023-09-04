@@ -87,12 +87,17 @@ MacBook Pro with Quad Core Processor, 16 GB RAM and 1 TB HDD
 
 
 ## Enable the Docker Server REST API or TCP Socket
+Check the status of docker service to find the path of docker service configuration file
 ```
 sudo systemctl status docker
 ```
-
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/d8a56e35-f1ec-4b7e-bbaf-6ce5bac1e286)
+
+
+You can edit the /lib/systemd/system/docker.service file as Administrator and append tcp://0.0.0.0:4243 at line 13 as shown below
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/545d9fbc-db55-418e-ab18-dc74578cf819)
+
 
   
 ## What is Docker?

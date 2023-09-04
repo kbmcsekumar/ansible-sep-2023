@@ -310,3 +310,15 @@ exit
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/c3e608ae-a8a9-4c2a-b094-e2a18dd3fedd)
 
+## Lab - Creating  a container in the foreground/interactive mode
+```
+docker run -it --name ubuntu3 --hostname ubuntu3 ubuntu:22.04 /bin/bash
+ls
+hostname
+hostname -i
+exit
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/78eb49bb-ec21-4324-8ac0-e284409afc63)
+

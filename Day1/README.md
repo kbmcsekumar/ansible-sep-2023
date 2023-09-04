@@ -10,6 +10,14 @@
 https://app.mymapit.in/code4/tiny/VxOr50  
 </pre>
 
+## Installing network tools in Ubuntu lab machine
+```
+sudo apt install -y net-tools iputils-ping
+```
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/2d9ba90e-b01d-4598-ad77-d0823e03aebe)
+
+
 # Docker Overview
 
 ## What are Bootloaders?

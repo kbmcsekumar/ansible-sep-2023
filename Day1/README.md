@@ -254,3 +254,12 @@ docker rmi hello-world:latest
 
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/8b58a9e2-4cc5-49d6-b7f4-a3fd927788b7)
+
+
+## Lab - Creating your first container
+```
+docker run hello-world:latest
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/03081efe-9a1d-415d-b6e8-8acf37b00f7e)

@@ -132,3 +132,19 @@ Expected output
 └─$ docker --version
 Docker version 20.10.25+dfsg1, build b82b9f3  
 </pre>
+
+## Lab - Listing docker images from Local Docker Registry
+```
+docker images
+```
+
+Expected output
+<pre>
+┌──(jegan㉿tektutor.org)-[~/ansible-sep-2023]
+└─$ docker images
+REPOSITORY                     TAG        IMAGE ID       CREATED         SIZE
+tektutor/ansible-centos-node   latest     67e2c2ee6256   2 days ago      428MB
+tektutor/ansible-ubuntu-node   latest     a3f39aea7460   2 days ago      220MB
+centos                         7.9.2009   eeb6ee3f44bd   23 months ago   204MB
+ubuntu                         16.04      b6f507652425   2 years ago     135MB  
+</pre>

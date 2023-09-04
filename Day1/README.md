@@ -122,6 +122,13 @@ Expected output
 
 # Docker Commands
 
+## Lab - Connecting your local Docker client to a remote Docker server
+You need to do this on your local machine
+```
+echo DOCKER_HOST=tcp://<ip-address-of-machine-where-docker-server-is-running>:4243
+docker images
+```
+
 ## Lab - Finding docker version
 ```
 docker --version

@@ -398,3 +398,13 @@ docker run -d --name lb --hostname lb -p 8001:80 nginx:latest
 
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/47ba2277-e23a-4079-b557-bb321f3f1ec7)
+
+We need to configure the lb container to work like a load balancer, hence let's copy its config file to local machine to edit it and put it back inside.
+
+```
+cd ~/ansible-sep-2023/Day1/load-balancer
+docker cp lb:/etc/nginx/nginx.conf .
+ls
+```
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/c6c4ae26-a1bb-48e5-a41e-001fa8579280)

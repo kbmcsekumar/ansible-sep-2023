@@ -48,7 +48,35 @@ https://app.mymapit.in/code4/tiny/VxOr50
    - vSphere/vCenter - Bare-metal Hypervisor (type 1)
   Oracle virtualbox (type2 - Free)
   Parallels (type2 - Mac OS-X)
-  Microsoft Hyper-V 
+  Microsoft Hyper-V
+
+## In the absence of Virtualization technology, how many minimal physical servers are required to support 1000 active OS?
+1000 Physical servers are required
+
+## With Virtualization technology, how many minimal physical servers are required to support 1000 OS?
+250 Physical Servers - each supporting 4 Virtual Machines
+
+Processors with multiple CPU Cores
+- AMD Processors it comes with 128 CPU Cores
+
+Processors comes in 2 form factors
+- SCM ( Single Chip Module ) - One IC will host one Processor
+- MCM ( Multi Chip Module ) - Once IC will host multiple Processors
+
+Server Motherboards with 4 Sockets
+
+Let's say MCM Processor with 4 Processor per IC
+Each Processor supporting 128 CPU Cores
+1 Socket = 4 Processors with 128 CPU Cores on each Processor = 4 x 128 x 4 = 2048
+
+Hyperthreading - each Physical CPU Core is capable of running 2 threads parallely 
+Hence, Hypervisor softwares will see each Physical CPU Cores as 2 Virtual Cores
+
+2048 x 2 = 4096 virtual cores
+
+MacBook Pro with Quad Core Processor, 16 GB RAM and 1 TB HDD
+- I used to 2 VMS + 1 Host OS(Mac)
+
   
 ## What is Docker?
 

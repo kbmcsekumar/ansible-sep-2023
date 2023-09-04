@@ -422,3 +422,7 @@ ls
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/c6c4ae26-a1bb-48e5-a41e-001fa8579280)
 
+
+We need to edit the nginx.conf as shown below updating your web1, web2 and web3 container IPs as shown below
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/2f04faef-8948-4c4e-ba34-fa44288dd97d)
+

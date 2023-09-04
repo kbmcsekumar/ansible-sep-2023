@@ -122,7 +122,7 @@ Expected output
 
 # Docker Commands
 
-## Lab - Connecting your local Docker client to a remote Docker server
+## Demo - Connecting your local Docker client to a remote Docker server
 You need to do this on your local machine
 ```
 export DOCKER_HOST=tcp://<ip-address-of-machine-where-docker-server-is-running>:4243

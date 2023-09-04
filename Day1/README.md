@@ -322,3 +322,10 @@ exit
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/78eb49bb-ec21-4324-8ac0-e284409afc63)
 
+## Lab - Finding more details about a container
+```
+docker inspect ubuntu1
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/8eb7225c-a497-47e9-9d34-2295d0c16eb1)

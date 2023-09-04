@@ -12,8 +12,44 @@ https://app.mymapit.in/code4/tiny/VxOr50
 
 # Docker Overview
 
+## What are Bootloaders?
+- are system utilities that helps in setting up dual/multi boot in your laptop/desktop/workstation
+- i.e you can install 3~4 Operating System on your laptop/desktop/workstation
+- but only one OS can be active at any point of time
+- If you switch on your laptop with once the BIOS POST(Power On Self Test) completes, the BIOS
+  will instruct the CPU to execute the system utility at Sector 0, Byte 0 in your Hard Disk. The Sector 0, Byte 0 is 512 bytes and it is referred as Mater Boot Record (MBR)
+- the Boot Loader System utility is installed on the MBR of your Hard disk
+- Boot Loader will scan your Hard disk searching for Operating Systems, if it detects more than one Operating System, then it gives a menu for you to choose to select which OS you wish to boot into
+- Let's say you booted machine into Windows, but you need Ubuntu, you first have to shutdown Windows and boot into Ubuntu and vice versa
+- Only one OS can be active at any point of time
+- Examples
+  - LILO (Linux Loader - opensource)
+  - GRUB1 - opensource
+  - GRUB2 - opensource
+  - For Mac users, BootCamp you can boot into windows on a Mac OS-X
+  
 ## What is Hypervisor?
-
+- many OS can be running side-by-side on the same laptop/desktop/workstation/servers
+- i.e many OS can be active at the same time
+- Virtualization technology
+- this is a combination of Hardware + Software technology
+- Processors
+  - AMD
+    - AMD-V - Virtualization Feature set supported in the Processor
+  - Intel
+    - VT-X - Virtualization Feature set supported in the Processor
+- there are two types of Hypervisors
+  1. Type1 - used in Servers ( Bare-metal Hypervisors - can be installed directly on a HW )
+  2. Type2 - used in Laptops/Desktops/Workstations ( requires Host OS - Unix/Linux/Windows/Mac)
+- Examples
+  VMWare 
+   - Workstation - Linux & Windows(type2)
+   - Fusion - Mac OS-X (type2)
+   - vSphere/vCenter - Bare-metal Hypervisor (type 1)
+  Oracle virtualbox (type2 - Free)
+  Parallels (type2 - Mac OS-X)
+  Microsoft Hyper-V 
+  
 ## What is Docker?
 
 ## Hypervisor vs Docker

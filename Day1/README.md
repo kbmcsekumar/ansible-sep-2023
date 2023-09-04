@@ -408,3 +408,4 @@ ls
 ```
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/c6c4ae26-a1bb-48e5-a41e-001fa8579280)
+

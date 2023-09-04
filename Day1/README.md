@@ -264,3 +264,18 @@ docker run hello-world:latest
 
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/03081efe-9a1d-415d-b6e8-8acf37b00f7e)
+
+## Lab - Listing the docker containers
+
+List only running containers
+```
+docker ps
+```
+
+List all containers
+```
+docker ps -a
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/32c308c7-e655-445f-9c76-54fe35fbc7d1)

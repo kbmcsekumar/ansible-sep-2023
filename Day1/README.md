@@ -111,7 +111,6 @@ sudo systemctl status docker
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/98e82f0e-51fa-4627-9860-2dbe3fb5c9d8)
 
-
   
 ## What is Docker?
 
@@ -120,3 +119,16 @@ Expected output
 ## Hypervisor High-Level Architecture
 
 ## Docker High-Level Architecture
+
+# Docker Commands
+
+## Lab - Finding docker version
+```
+docker --version
+```
+Expected output
+<pre>
+┌──(jegan㉿tektutor.org)-[~/ansible-sep-2023]
+└─$ docker --version
+Docker version 20.10.25+dfsg1, build b82b9f3  
+</pre>

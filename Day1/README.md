@@ -102,6 +102,12 @@ sudo vim /lib/systemd/system/docker.service
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/545d9fbc-db55-418e-ab18-dc74578cf819)
 
+You need to restart docker service to apply the config changes
+```
+sudo systemctl-daemon reload
+sudo systemctl restart docker
+sudo systemctl status docker
+```
 
   
 ## What is Docker?

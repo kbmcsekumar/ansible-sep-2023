@@ -338,3 +338,14 @@ docker image inspect ubuntu:16.04
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/e4cf1aef-d1ab-488d-94b2-8ce3536357d9)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/437b5236-220e-49a4-8d82-c51cd2a71369)
+
+## Lab - Renaming a container
+```
+docker rename <current-container-name> <new-name>
+docker ps
+docker rename ubuntu2 c2
+docker ps
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/b5ec82c1-31f9-4b52-9b56-fa82c393bfb7)

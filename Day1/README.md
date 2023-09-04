@@ -85,6 +85,15 @@ Hence, Hypervisor softwares will see each Physical CPU Cores as 2 Virtual Cores
 MacBook Pro with Quad Core Processor, 16 GB RAM and 1 TB HDD
 - I used to 2 VMS + 1 Host OS(Mac)
 
+
+## Enable the Docker Server REST API or TCP Socket
+```
+sudo systemctl status docker
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/d8a56e35-f1ec-4b7e-bbaf-6ce5bac1e286)
+
   
 ## What is Docker?
 

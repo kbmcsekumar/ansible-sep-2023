@@ -58,6 +58,8 @@ Expected output
   Parallels (type2 - Mac OS-X)
   Microsoft Hyper-V
 - each Virtual Machine(VM)/Guest OS represents one fully functional Operating System
+- each Virtual Machine(VM) gets its own IP address
+- each Virtual Machine has its own shell, port range and Network stack
   
 ## In the absence of Virtualization technology, how many minimal physical servers are required to support 1000 active OS?
 1000 Physical servers are required
@@ -116,6 +118,11 @@ Expected output
 ## What is Docker?
 - is an application virtualization technology
 - each container represents one application
+- container doesn't OS Kernel
+- container doesn't get its own dedicated Hardware resources
+- each container has its own shell, port range and Network stack
+- each container gets an IP address
+- each container has a file system
 
 ## Hypervisor vs Docker
 

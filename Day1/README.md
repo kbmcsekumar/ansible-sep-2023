@@ -426,3 +426,15 @@ Expected output
 We need to edit the nginx.conf as shown below updating your web1, web2 and web3 container IPs as shown below
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/2f04faef-8948-4c4e-ba34-fa44288dd97d)
 
+We need to copy the nginx.conf file from our lab machine to lb container and restart lb container to apply config changes
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day1/load-balancer
+docker cp nginx.conf lb:/etc/nginx/nginx.conf
+docker restart lb
+docker ps
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/967e0099-44bd-4f4d-8531-baa0aee07d55)

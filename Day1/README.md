@@ -57,7 +57,8 @@ Expected output
   Oracle virtualbox (type2 - Free)
   Parallels (type2 - Mac OS-X)
   Microsoft Hyper-V
-
+- each Virtual Machine(VM)/Guest OS represents one fully functional Operating System
+  
 ## In the absence of Virtualization technology, how many minimal physical servers are required to support 1000 active OS?
 1000 Physical servers are required
 
@@ -113,6 +114,8 @@ Expected output
 
   
 ## What is Docker?
+- is an application virtualization technology
+- each container represents one application
 
 ## Hypervisor vs Docker
 

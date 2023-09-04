@@ -192,6 +192,7 @@ Examples
 ## Hypervisor High-Level Architecture
 
 ## Docker High-Level Architecture
+![Docker High Level Architecture](DockerHighLevelArchitecture.png)
 
 # Docker Commands
 

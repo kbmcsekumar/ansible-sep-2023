@@ -196,6 +196,6 @@ ansible-doc -l | wc -l
 ```
 
 Expected output
-![Uploading image.png…]()
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/f11d3aa6-0e9d-4a47-881c-6e35132cbd59)
 
 

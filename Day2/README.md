@@ -266,3 +266,4 @@ ansible-playbook install-nginx-playbook.yml
 
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/dbe68949-52ab-48bf-98e9-edacb518f80b)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/88d9134d-1fe3-4e12-9cb1-225c71a66116)

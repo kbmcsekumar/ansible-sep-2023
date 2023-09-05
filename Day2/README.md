@@ -104,4 +104,5 @@ docker build -t tektutor/ansible-ubuntu-node:latest .
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/cd4c5a3f-a54b-42ef-90e5-ec211c94a466)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/49ce0204-1227-4ee4-b4b6-3cce9d337b7d)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/f598d61b-5639-4bee-aaad-90131dd62181)
 

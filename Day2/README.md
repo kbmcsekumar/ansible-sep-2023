@@ -301,6 +301,7 @@ Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/651e6148-8ee3-48f9-ba33-7d6e1c72738c)
 
 Running the refactored playbook
+```
 cd ~/ansible-sep-2023
 git pull
 cd Day2/playbooks

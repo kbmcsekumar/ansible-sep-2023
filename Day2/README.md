@@ -253,6 +253,10 @@ ansible all -m ping
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/49b5a156-553a-4c85-86e7-1df3baf9959b)
 
+Capturing the output of ansible ad-hoc command
+```
+ansible ubuntu1 -m ping -vvvv > out.yml 2>&1
+```
 
 ## Lab - Running the install nginx playbook
 ```

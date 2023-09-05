@@ -108,13 +108,24 @@ Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/03d8f633-017e-4230-9df5-1b25e95505e1)
 ![Port Forwarding](portforwarding.png)
 
-## Creating ubuntu1 and ubuntu2 container using our Custom Ubuntu Ansible node image
+## Lab - Creating ubuntu1 and ubuntu2 container using our Custom Ubuntu Ansible node image
 ```
 docker run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/ansible-ubuntu-node:latest
 docker run -d --name ubuntu2 --hostname ubuntu1 -p 2002:22 -p 8002:80 tektutor/ansible-ubuntu-node:latest 
 docker images
-
 ```
 
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/9fd1c67e-c9c6-4b0e-8260-ae8f2fbdf664)
+
+# Lab - Testing if we are able to ssh into ubuntu1 and ubuntu2 container
+```
+ssh -p 2001 root@localhost
+exit
+ssh -p 2002 root@localhost
+exit
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/e81e78bc-7cc3-436e-b730-ded353e08c43)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/bbed3807-8b88-44ee-bdd6-7b14c1b76608)

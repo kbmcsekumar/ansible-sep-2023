@@ -54,6 +54,11 @@ https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.
 
 # Ansible Commands
 
+## Ansible Configuration file
+<pre>
+https://gist.github.com/alivx/2a4ca3e577ead4bd38d247c258e6513b  
+</pre>
+
 ## Lab - Cloning TekTutor Training Repository
 ```
 cd ~

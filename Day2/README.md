@@ -181,3 +181,12 @@ Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/e989c468-4c8a-46ce-a86b-dd0deffc1f2d)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/9164dfb9-369c-4a49-a3eb-e74fa0486da8)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/5d4f316b-5694-436d-a061-5ef98cb167bd)
+
+## Lab - Getting help about ansible modules
+```
+ansible-doc -l
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/f563c433-d120-4543-aacc-5b1ae0fdc43c)
+

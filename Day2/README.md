@@ -190,3 +190,12 @@ ansible-doc -l
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/f563c433-d120-4543-aacc-5b1ae0fdc43c)
 
+## Lab - Finding total number of ansible modules supported by your version of Ansible
+```
+ansible-doc -l | wc -l
+```
+
+Expected output
+![Uploading image.png…]()
+
+

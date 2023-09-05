@@ -487,3 +487,16 @@ docker network ls
 
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/7893050f-6be3-4ba6-b8d6-d4d59bbbf9cc)
+
+Let's create a new container and attach the new container to our custom network
+```
+docker run -dit --name ubuntu1 --hostname ubuntu1 --network=my-network-1 ubuntu:16.04 /bin/bash
+```
+
+Let's inspect the my-network-1 to see if the ubuntu1 container 
+```
+docker network inspect my-network-1
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/d2a4564b-52bd-4b45-95ed-3ce1ec5bd80f)

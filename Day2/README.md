@@ -90,3 +90,15 @@ ssh-keygen
 
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/227827a8-87a4-435e-943e-6519ff2759ee)
+
+## Lab - Building custom ubuntu ansible docker image
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day2/CustomDockerImages/ubuntu
+cp ~/.ssh/id_rsa.pub authorized_keys
+
+docker build -t tektutor/ansible-ubuntu-node:latest .
+```
+
+Expected output

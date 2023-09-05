@@ -1,5 +1,8 @@
 - name: Demonstrates writing a simple ansible playbook
   hosts: all
   tasks:
-  - name: Ping ansible node
+  - name: Ping1 ansible node
     ping:
+
+#  - name: Ping1 ansible node
+#    ping:

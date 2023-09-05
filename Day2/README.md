@@ -140,3 +140,28 @@ ansible -i inventory all -m ping
 
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/795ca02e-9ffb-4b29-87e2-271edeb8ab12)
+
+## Lab - Ansible ping with verbosity enabled upto 4 levels for troubleshooting/debugging purpose
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day2/static-inventory
+ansible -i inventory all -m ping -vvvv
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/301b11b3-a3cf-4864-9549-a4575770d22f)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/8c2f37b5-2911-497f-81e7-3f10f25434bc)
+
+## Lab - Using Ansible configuration file to point out the inventory ansible must be using
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day2/static-inventory
+cat ansible.cfg
+ansible all -m ping
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/6a4bab1f-164c-43e8-b991-ad177a4b1d6c)
+

@@ -467,7 +467,7 @@ Expected output is each time you browse, it route the calls in round robin fashi
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/4837c427-eb8c-4ad3-a177-077d6d687760)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/f2a2cf91-509c-434b-9ec4-f88426bd8cf7)
 
-## Docker Networks
+## Lab - Understanding Docker networking
 
 Docker supports 3 types of network out of the box
 ```

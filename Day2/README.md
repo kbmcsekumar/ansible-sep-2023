@@ -198,4 +198,18 @@ ansible-doc -l | wc -l
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/f11d3aa6-0e9d-4a47-881c-6e35132cbd59)
 
+## Lab - Getting help info about any ansible module
+```
+ansible-doc ping
+ansible-doc shell
+ansible-doc copy
+ansible-doc file
+ansible-doc template
+ansible-doc service
+ansible_doc docker_image
+ansible_doc docker_container
+ansible_doc setup
+```
 
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/4953451b-35a1-4463-87b5-6e9d2540c02b)

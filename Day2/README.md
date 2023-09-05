@@ -54,6 +54,13 @@ https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.
 
 # Ansible Commands
 
+## Lab - Cloning TekTutor Training Repository
+```
+cd ~
+git clone https://github.com/tektutor/ansible-sep-2023.git
+cd ansible-sep-2023
+```
+
 ## Lab - Finding Ansible version
 ```
 ansible --version

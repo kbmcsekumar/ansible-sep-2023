@@ -46,3 +46,30 @@
 - Puppet
 - Chef
 - Salt/SaltStack
+
+## Installing Ansible
+<pre>
+https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html
+</pre>
+
+# Ansible Commands
+
+## Lab - Finding Ansible version
+```
+ansible --version
+```
+
+Expected output
+<pre>
+┌──(jegan㉿tektutor.org)-[~/ansible-sep-2023/Day2]
+└─$ ansible --version
+ansible [core 2.14.9]
+  config file = None
+  configured module search path = ['/home/jegan/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3/dist-packages/ansible
+  ansible collection location = /home/jegan/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible
+  python version = 3.11.2 (main, Mar 13 2023, 12:18:29) [GCC 12.2.0] (/usr/bin/python3)
+  jinja version = 3.1.2
+  libyaml = True
+</pre>

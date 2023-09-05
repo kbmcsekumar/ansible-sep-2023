@@ -478,3 +478,4 @@ docker network inspect bridge
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/eba1dce7-f732-4309-87c7-f5c1c119abfb)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/c0cae6f4-c2fb-4f75-b61d-5e84f676a6b2)
 
+## 

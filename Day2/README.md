@@ -40,3 +40,6 @@
 ![Ansible High-Level Architecture](AnsibleHighLevelArchitecture.png)
 
 ## Ansible Alternate Tools
+- Puppet
+- Chef
+- Salt/SaltStack

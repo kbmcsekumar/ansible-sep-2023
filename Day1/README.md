@@ -478,4 +478,12 @@ docker network inspect bridge
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/eba1dce7-f732-4309-87c7-f5c1c119abfb)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/c0cae6f4-c2fb-4f75-b61d-5e84f676a6b2)
 
-## 
+Creating a custom network in docker
+```
+docker network ls
+docker network create my-network-1 --subnet 200.10.20.0/24
+docker network ls
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/7893050f-6be3-4ba6-b8d6-d4d59bbbf9cc)

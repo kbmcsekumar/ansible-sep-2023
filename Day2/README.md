@@ -73,3 +73,13 @@ ansible [core 2.14.9]
   jinja version = 3.1.2
   libyaml = True
 </pre>
+
+## Lab - Building Custom Docker Image
+
+We need to create key pair as shown below with default options
+```
+ssh-keygen
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/227827a8-87a4-435e-943e-6519ff2759ee)

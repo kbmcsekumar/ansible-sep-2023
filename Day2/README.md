@@ -22,9 +22,11 @@
 - helps in automating software installation and configuration on a existing OS/Virtual machine in OnPrem servers, public/private/hybrid cloud environments
 - also helps create users with specific access
 - Ansible also supports some minimal provisioning features
--   
-
+ 
 ## Provisioner vs Configuration Management Tool
+- The strength of Provisioner tools is in creating a new Virtual Machine in OnPrem/Cloud environments
+- Provisioner also supports some basic configuration management features, but it doesn't or can't replace the Configuration Management tools
+- Generally provisioning tools like Terraform creates the Virtual Machine and then invoke Ansible to further configure the machine
 
 ## Ansible Overview
 - is a Configuration Management tool

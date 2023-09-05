@@ -466,3 +466,15 @@ Expected output is each time you browse, it route the calls in round robin fashi
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/b7a04cd8-eb3a-4981-b7a7-287cb1bd52cc)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/4837c427-eb8c-4ad3-a177-077d6d687760)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/f2a2cf91-509c-434b-9ec4-f88426bd8cf7)
+
+## Docker Networks
+
+Docker supports 3 types of network out of the box
+```
+docker network ls
+docker network inspect bridge
+```
+
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/eba1dce7-f732-4309-87c7-f5c1c119abfb)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/c0cae6f4-c2fb-4f75-b61d-5e84f676a6b2)
+

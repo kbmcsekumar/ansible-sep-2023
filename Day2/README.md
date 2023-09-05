@@ -71,7 +71,7 @@ Expected output
 ┌──(jegan㉿tektutor.org)-[~/ansible-sep-2023/Day2]
 └─$ ansible --version
 ansible [core 2.14.9]
-  config file = None
+  config file = Nonecustom
   configured module search path = ['/home/jegan/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
   ansible python module location = /usr/lib/python3/dist-packages/ansible
   ansible collection location = /home/jegan/.ansible/collections:/usr/share/ansible/collections
@@ -299,4 +299,19 @@ Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/821ff650-9b4c-4a92-bdd1-e4b206f353b8)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/597c1387-6abf-4785-9107-0efa50dd78d0)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/651e6148-8ee3-48f9-ba33-7d6e1c72738c)
+
+Running the refactored playbook
+cd ~/ansible-sep-2023
+git pull
+cd Day2/playbooks
+cat ansible.cfg
+cat hosts
+ansible-playbook install-nginx-playbook.yml
+
+curl http://localhost:8001
+curl http://localhost:8002
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/53ba3cb9-27b5-4a2f-afb1-3f8f71a7f1f0)
 

@@ -216,3 +216,16 @@ Expected output
 
 ## Ansible Playbook Structure
 ![Ansible Playbook Structure](ansible-playbook-structure.png)
+
+
+## Lab - Running your first ansible playbook
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day2/playbooks
+ansible-playbook -i ../static-inventory/inventory ping-ansiblenode-playbook.yml
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/3bab3460-c6fb-41bd-9c0e-fb65bfd25852)
+

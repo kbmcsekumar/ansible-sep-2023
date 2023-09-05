@@ -240,3 +240,15 @@ ansible-playbook -i ../static-inventory/inventory ping-ansiblenode-playbook.yml 
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/9bd96cf4-7433-4310-9b77-6f231dfa0498)
 
+
+## Lab - Refactoring the inventory file, moving all common variable as group variables
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day2/playbooks
+cat ansible.cfg
+cat hosts
+ansible all -m ping
+```
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/49b5a156-553a-4c85-86e7-1df3baf9959b)

@@ -14,7 +14,7 @@
 - helps in restriction your application access to only within the cluster using internal service
 - self-healing platform
 - Examples
-  - Docker SWAR
+  - Docker SWARM
   - Google Kubernetes
   - Red Hat OpenShift
 
@@ -35,7 +35,9 @@
   1. Ansible Core - opensource, supports command-line interface only, can be installed only in Linux/Mac
   2. AWX - opensource, supports Web Interface, playbook can be executed but not create, developed on top of Ansible Core
   3. Red Hat Ansible Tower - developed on top of AWX, hence supports Web Interface
-
+- Domain Specific Language(DSL)
+  - the langauge in which the automation code is written
+  - DSL used by Ansible is YAML (Yet Another Markup Language)
 ## Ansible High Level Architecture
 ![Ansible High-Level Architecture](AnsibleHighLevelArchitecture.png)
 

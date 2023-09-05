@@ -213,3 +213,6 @@ ansible_doc setup
 
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/4953451b-35a1-4463-87b5-6e9d2540c02b)
+
+## Ansible Playbook Structure
+![Ansible Playbook Structure](ansible-playbook-structure.png)

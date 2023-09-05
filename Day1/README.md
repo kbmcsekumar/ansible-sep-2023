@@ -466,3 +466,70 @@ Expected output is each time you browse, it route the calls in round robin fashi
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/b7a04cd8-eb3a-4981-b7a7-287cb1bd52cc)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/4837c427-eb8c-4ad3-a177-077d6d687760)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/f2a2cf91-509c-434b-9ec4-f88426bd8cf7)
+
+## Lab - Understanding Docker networking
+
+Docker supports 3 types of network out of the box
+```
+docker network ls
+docker network inspect bridge
+```
+
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/eba1dce7-f732-4309-87c7-f5c1c119abfb)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/c0cae6f4-c2fb-4f75-b61d-5e84f676a6b2)
+
+Creating a custom network in docker
+```
+docker network ls
+docker network create my-network-1 --subnet 200.10.20.0/24
+docker network ls
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/7893050f-6be3-4ba6-b8d6-d4d59bbbf9cc)
+
+Let's create a new container and attach the new container to our custom network
+```
+docker run -dit --name ubuntu1 --hostname ubuntu1 --network=my-network-1 ubuntu:16.04 /bin/bash
+```
+
+Let's inspect the my-network-1 to see if the ubuntu1 container 
+```
+docker network inspect my-network-1
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/d2a4564b-52bd-4b45-95ed-3ce1ec5bd80f)
+
+Each time a new container is created, docker creates a pair of veth devices.  One of the veth (virtual ethernet) stays in the local machine where docker container is running and the other veth device is used within the docker container.  The veth device within container acts as the virtual network card/interface for the container i.e eth0, this helps the container communicate with the outside world, the other veth device in the local machine machine helps the local machine communicate with the container.
+
+The veth suppors only uni-directional communication, hence a pair of veth devices are created for every container.
+
+You can check the veth on local machine as shown below
+```
+ifconfig
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/0322f3fa-c509-40a5-823f-7f05333dd524)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/b04fbb3d-f00a-484e-a0a9-1940f1465188)
+
+
+In order to check the veth inside the container, we need to get inside the container
+```
+docker exec -it ubuntu1 bash
+```
+
+Let's install network tools within the container in order to issue ifconfig command
+```
+apt update && apt install -y net-tools
+```
+
+You may now check ifconfig in the container shell
+```
+ifconfig
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/2394162f-ab17-4629-8500-f98d0edf55d9)
+

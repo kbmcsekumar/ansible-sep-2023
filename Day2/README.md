@@ -253,6 +253,10 @@ ansible all -m ping
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/49b5a156-553a-4c85-86e7-1df3baf9959b)
 
+Capturing the output of ansible ad-hoc command
+```
+ansible ubuntu1 -m ping -vvvv > out.yml 2>&1
+```
 
 ## Lab - Running the install nginx playbook
 ```
@@ -266,3 +270,33 @@ ansible-playbook install-nginx-playbook.yml
 
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/dbe68949-52ab-48bf-98e9-edacb518f80b)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/88d9134d-1fe3-4e12-9cb1-225c71a66116)
+
+Let's us check if the html page is accessible from ubuntu1 and ubuntu2 ansible nodes
+```
+curl http://localhost:8001
+curl http://localhost:8002
+ansible ubuntu1 -m shell -a "service nginx status"
+```
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/c747211b-36b3-451b-9b74-3215e245d4b2)
+
+
+Let's run the refactored playbook
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day2/playbooks
+cat ansible.cfg
+cat hosts
+ansible-playbook install-nginx-playbook.yml
+
+curl http://localhost:8001
+curl http://localhost:8002
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/821ff650-9b4c-4a92-bdd1-e4b206f353b8)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/597c1387-6abf-4785-9107-0efa50dd78d0)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/651e6148-8ee3-48f9-ba33-7d6e1c72738c)
+

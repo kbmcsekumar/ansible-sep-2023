@@ -1,12 +1,34 @@
 ## What is Provisioning Tool?
+- helps in creating a new Virtual Machine in the onPrem infrastructure, public/private/hybrid cloud
+- automating OS installation
+- Examples
+  - Docker, Vagrant, Cloudformation, Terraform
+- Terraform also supports some minimal Configuration Management Features
 
 ## What is Container Orchestration Platform?
+- helps in managing your containerized application workloads
+- helps in setting up High Available application within Container Orchestration Platform
+- provides inbuilt monitoring tools
+- supports scale up/down depending on the user traffice to your application workloads
+- helps in exposing your application to external world using external Services
+- helps in restriction your application access to only within the cluster using internal service
+- self-healing platform
+- Examples
+  - Docker SWAR
+  - Google Kubernetes
+  - Red Hat OpenShift
 
 ## What is Configuration Management Tool?
+- helps in automating software installation and configuration on a existing OS/Virtual machine in OnPrem servers, public/private/hybrid cloud environments
+- also helps create users with specific access
+- Ansible also supports some minimal provisioning features
+-   
 
 ## Provisioner vs Configuration Management Tool
 
 ## Ansible Overview
+- is a Configuration Management tool
+- helps in automating software installations/configuration typically automating any administrivative activities on a existing OS/Virtual machine
 
 ## Ansible High Level Architecture
 

@@ -9,3 +9,15 @@
 
   - name: Start nginx web server in Ubuntu nodes
     shell: service nginx start
+
+  - name: Create the custom web root folder
+    file: path=/var/html state=directory mode=0755
+
+  - name: Deploy custom html page
+    copy: src=index.html dest=/var/html/index.html
+
+  - name: Configure nginx web server to use our custom folder to pick the html pages
+    copy: src=default dest=/etc/nginx/sites-available/default
+
+  - name: Restart nginx web server to apply config changes
+    shell: service nginx restart

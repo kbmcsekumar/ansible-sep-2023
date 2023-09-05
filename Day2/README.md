@@ -252,3 +252,17 @@ ansible all -m ping
 ```
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/49b5a156-553a-4c85-86e7-1df3baf9959b)
+
+
+## Lab - Running the install nginx playbook
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day2/playbooks
+cat ansible.cfg
+cat hosts
+ansible-playbook install-nginx-playbook.yml
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/dbe68949-52ab-48bf-98e9-edacb518f80b)

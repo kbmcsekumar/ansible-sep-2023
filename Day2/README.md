@@ -267,3 +267,12 @@ ansible-playbook install-nginx-playbook.yml
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/dbe68949-52ab-48bf-98e9-edacb518f80b)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/88d9134d-1fe3-4e12-9cb1-225c71a66116)
+
+Let's us check if the html page is accessible from ubuntu1 and ubuntu2 ansible nodes
+```
+curl http://localhost:8001
+curl http://localhost:8002
+ansible ubuntu1 -m shell -a "service nginx status"
+```
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/c747211b-36b3-451b-9b74-3215e245d4b2)

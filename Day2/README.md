@@ -31,6 +31,10 @@
 ## Ansible Overview
 - is a Configuration Management tool
 - helps in automating software installations/configuration typically automating any administrivative activities on a existing OS/Virtual machine
+- comes in 3 flavours
+  1. Ansible Core - opensource, supports command-line interface only, can be installed only in Linux/Mac
+  2. AWX - opensource, supports Web Interface, playbook can be executed but not create, developed on top of Ansible Core
+  3. Red Hat Ansible Tower - developed on top of AWX, hence supports Web Interface
 
 ## Ansible High Level Architecture
 ![Ansible High-Level Architecture](AnsibleHighLevelArchitecture.png)

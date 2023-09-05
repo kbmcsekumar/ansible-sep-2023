@@ -229,3 +229,14 @@ ansible-playbook -i ../static-inventory/inventory ping-ansiblenode-playbook.yml
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/3bab3460-c6fb-41bd-9c0e-fb65bfd25852)
 
+## Lab - Performing syntax checking without running the playbook
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day2/playbooks
+ansible-playbook -i ../static-inventory/inventory ping-ansiblenode-playbook.yml --syntax-check
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/9bd96cf4-7433-4310-9b77-6f231dfa0498)
+

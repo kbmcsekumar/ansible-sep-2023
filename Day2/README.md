@@ -33,5 +33,6 @@
 - helps in automating software installations/configuration typically automating any administrivative activities on a existing OS/Virtual machine
 
 ## Ansible High Level Architecture
+![Ansible High-Level Architecture](AnsibleHighLevelArchitecture.png)
 
 ## Ansible Alternate Tools

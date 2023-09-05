@@ -30,6 +30,7 @@
 
 ## Ansible Overview
 - is a Configuration Management tool
+- develped by Michael Deehan in Python language
 - helps in automating software installations/configuration typically automating any administrivative activities on a existing OS/Virtual machine
 - comes in 3 flavours
   1. Ansible Core - opensource, supports command-line interface only, can be installed only in Linux/Mac

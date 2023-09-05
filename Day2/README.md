@@ -129,3 +129,14 @@ exit
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/e81e78bc-7cc3-436e-b730-ded353e08c43)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/bbed3807-8b88-44ee-bdd6-7b14c1b76608)
+
+## Lab - Running ansible ad-hoc command to ping the ansible nodes
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day2/static-inventory
+ansible -i inventory all -m ping
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/795ca02e-9ffb-4b29-87e2-271edeb8ab12)

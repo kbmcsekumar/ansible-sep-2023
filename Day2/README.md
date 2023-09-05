@@ -107,3 +107,14 @@ Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/f598d61b-5639-4bee-aaad-90131dd62181)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/03d8f633-017e-4230-9df5-1b25e95505e1)
 ![Port Forwarding](portforwarding.png)
+
+## Creating ubuntu1 and ubuntu2 container using our Custom Ubuntu Ansible node image
+```
+docker images
+docker run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/ansible-ubuntu-node:latest
+docker run -d --name ubuntu2 --hostname ubuntu1 -p 2002:22 -p 8002:80 tektutor/ansible-ubuntu-node:latest 
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/7d249ea6-4e15-4c31-b116-c20ad3f67572)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/9fd1c67e-c9c6-4b0e-8260-ae8f2fbdf664)

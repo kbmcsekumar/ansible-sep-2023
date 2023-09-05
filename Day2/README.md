@@ -165,3 +165,19 @@ ansible all -m ping
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/6a4bab1f-164c-43e8-b991-ad177a4b1d6c)
 
+## Lab - Using ansible setup module to collect facts about ubuntu1 ansible node
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day2/static-inventory
+ansible all -m setup
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/59505ca0-a28c-4bd0-a5da-76316cf185eb)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/dbe95464-3d5e-4f14-92dd-3a01a6547a58)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/f75fcec4-4eb7-4f8b-890e-85afacdd6662)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/5fdb77a1-328b-413d-abdc-9e4e902b3292)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/e989c468-4c8a-46ce-a86b-dd0deffc1f2d)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/9164dfb9-369c-4a49-a3eb-e74fa0486da8)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/5d4f316b-5694-436d-a061-5ef98cb167bd)

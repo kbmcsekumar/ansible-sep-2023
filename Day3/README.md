@@ -99,3 +99,15 @@ Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/249feb41-028a-42a0-843c-8b7d9e86c358)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/a1d6d6a6-e3f2-46ea-ba91-013d72c5202f)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/b1ab05ce-346f-43d4-b5fb-3c9c82cbe30b)
+
+## Lab - Limitting the playbook execution to a limitted ansible node(s)
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day3/playbooks/after-refactoring
+ansible-playbook install-nginx-playbook.yml --limit=ubuntu1
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/75869c1c-975b-4df0-bb6e-3ae87a1a4b9c)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/547ea67d-9241-4b4b-96dd-b61a42c6b77f)

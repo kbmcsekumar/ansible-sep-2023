@@ -1,0 +1,8 @@
+- name: Demonstrates invoking other playbooks within a playbook
+  hosts: localhost
+  tasks:
+  - name: Invoke playbook
+    shell: ansible-playbook playbook-with-multiple-plays.yml -e jdk-path=/opt/jdk/jdk17 
+    register: output
+
+  - debug: var=output

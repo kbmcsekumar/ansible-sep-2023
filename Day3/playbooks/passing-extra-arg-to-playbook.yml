@@ -1,0 +1,6 @@
+- name: Demonstrates using extra argument passed from commandline
+  hosts: localhost
+  vars:
+    - jdk_path: /home/jegan/jdk17
+  tasks:
+  - debug: var=jdk_path

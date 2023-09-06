@@ -17,6 +17,7 @@ git pull
 cd Day3/CustomDockerImages/centos
 cp ~/.ssh/id_rsa.pub authorized_keys
 docker build -t tektutor/ansible-centos-node:latest .
+docker images
 ```
 
 Expected output
@@ -24,3 +25,43 @@ Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/aa1a2846-7f61-4508-ac60-4bb9e628eafe)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/364387fc-3ad4-4fe9-8f58-e473aeca24c4)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/95acb054-0aaf-4909-94fd-c8bbd6442d5f)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/27a0d0b8-0943-4460-beaf-b243774e321b)
+
+## Lab - Creating centos1 and centos2 containers using the newly build custom centos docker image
+```
+docker images
+docker run -d --name centos1 --hostname centos1 -p 2003:22 -p 8003:80 tektutor/ansible-centos-node:latest
+docker run -d --name centos2 --hostname centos2 -p 2004:22 -p 8004:80 tektutor/ansible-centos-node:latest
+docker ps
+```
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/19b9a5c6-c594-447f-be03-579f5b02c938)
+
+## Lab - Testing if we are able to SSH into the centos1 and centos2 containers
+```
+docker ps
+ssh -p 2003 root@localhost
+exit
+ssh -p 2004 root@localhost
+exit
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/e356e05b-de00-44ef-9a1a-73694760d771)
+
+## Lab - Suppressing host key checking while doing ssh into ansible nodes
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day3/playbooks
+cat ~/ansible.cfg
+ansible all -m ping
+cat ~/ansible.cfg
+ansible all -m ping
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/9688c1fd-b30d-4510-8b3a-71de5fcf27ee)
+
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/093cc89c-25f7-40c3-befb-f30f386970e0)
+

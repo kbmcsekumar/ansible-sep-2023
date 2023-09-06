@@ -165,3 +165,15 @@ Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/9fcb5000-73cd-4c9c-8a72-c51995ebbe1a)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/da4ca6ee-07e8-41f7-8b6e-b4c00f44ffed)
 
+## Lab - Provisioning containers using ansible playbook
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day3/playbooks
+ansible-playbook provision-docker-container-using-playbook.yml
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/112b51c3-3226-4dc0-aad1-2a1e8bb71639)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/da6e18a8-d019-4d62-b83a-5bdaa7c7b6df)
+

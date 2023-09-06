@@ -1,5 +1,9 @@
 - name: This playbook will install nginx, configures custom path of web root folder and deploys custom web page
   hosts: all
+  vars:
+    - greeting_msg: "Welcome to DevOps!" 
+    - conf_mgt_tool: Ansible
+    - provisioner_tool: Docker
   tasks:
   - name: Install nginx in Ubuntu node
     apt: 
@@ -14,16 +18,10 @@
     file: path=/var/html state=directory mode=0755
 
   - name: Deploy custom html page
-    copy: src=index.html dest=/var/html/index.html
+    template: src=index.html dest=/var/html/index.html
 
   - name: Configure nginx web server to use our custom folder to pick the html pages
     copy: src=default dest=/etc/nginx/sites-available/default
 
   - name: Restart nginx web server to apply config changes
     shell: service nginx restart
-
-#  Service module is recommended for managing services states in physical servers, VMs, cloud based machine
-#  But they won't work in containers, hence we are forced to use shell module
-#  Shell module is an non idempotent module, hence not recommended
-#  - name: Stop nginx web service using service module
-#  service: name=nginx state=stopped

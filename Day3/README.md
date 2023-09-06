@@ -65,7 +65,13 @@ Expected output
 
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/093cc89c-25f7-40c3-befb-f30f386970e0)
 
-## Executing install nginx playbook in Ubuntu and CentOS ansible nodes in a conditional fashion
+## Lab - Executing install nginx playbook in Ubuntu and CentOS ansible nodes in a conditional fashion
+### Optional
+```
+docker cp centos1:/etc/nginx/nginx.conf .
+```
+
+Now you may proceed as shown below
 ```
 cd ~/ansible-sep-2023
 git pull

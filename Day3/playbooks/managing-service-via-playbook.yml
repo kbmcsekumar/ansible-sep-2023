@@ -1,0 +1,9 @@
+- name: This playbook demonstrates use of service module
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: Install apache tomcat in Ubuntu
+    apt: name=apache2 state=latest update_cache=yes
+    
+  - name: Start nginx web server
+    service: name=apache2 state=started enabled=true

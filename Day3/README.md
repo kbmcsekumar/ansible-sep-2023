@@ -75,4 +75,4 @@ ansible-playbook install-ngxin-playbook.yml
 
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/ab70c95d-2ee4-4038-9b65-047120a31685)
-
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/632ebd9d-0fd0-40a6-9e75-5ec46ca8dc28)

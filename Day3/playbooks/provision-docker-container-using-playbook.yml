@@ -1,0 +1,29 @@
+- name: This playbook creates containers 
+  hosts: localhost
+  tasks:
+  - name: Delete all running containers
+    shell: docker rm -f $(docker ps -aqf "name=ubuntu1|ubuntu2|centos1|centos2")
+
+  - name: Provision ubuntu containers
+    docker_container:
+      docker_host: tcp://localhost:4243
+      name: "ubuntu-00{{item}}"
+      hostname: "ubuntu-00{{item}}"
+      image: "tektutor/ansible-ubuntu-node:latest"
+      state: started 
+      ports:
+        - "800{{item}}:80"
+        - "200{{item}}:22"
+    with_sequence: start=1 end=5
+
+  - name: Provision centos containers
+    docker_container:
+      docker_host: tcp://localhost:4243
+      name: "centos-00{{item}}"
+      hostname: "centos-00{{item}}"
+      image: "tektutor/ansible-centos-node:latest"
+      state: started 
+      ports:
+        - "900{{item}}:80"
+        - "300{{item}}:22"
+    with_sequence: start=1 end=5

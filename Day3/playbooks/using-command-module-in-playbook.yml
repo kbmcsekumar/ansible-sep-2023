@@ -1,0 +1,9 @@
+- name: Demonstrates using command module
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: Stop apache2 service
+    command: service apache2 stop
+    register: output
+
+  - debug: var=output

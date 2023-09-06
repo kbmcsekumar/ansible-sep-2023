@@ -136,3 +136,17 @@ Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/d0a06519-f279-4771-8735-8cb70203e111)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/e8ed32d2-5ab1-499f-88a4-64e96c69e0ef)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/fcb023ee-8fa0-464e-b95b-6b878ee6a963)
+
+## Lab - Using service module in ansible playbook
+When it prompts for password, type rps@12345
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day3/playbooks
+ansible-playbook managing-service-via-playbook.yml --ask-become-pass
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/35fb3b00-d4fd-496d-a91b-867c9811d1cd)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/bd84a84f-5319-4da6-a382-230c8e355018)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/49fdc173-fab8-44a2-b14e-a44413663b82)

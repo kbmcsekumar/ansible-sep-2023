@@ -149,4 +149,5 @@ ansible-playbook managing-service-via-playbook.yml --ask-become-pass
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/35fb3b00-d4fd-496d-a91b-867c9811d1cd)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/bd84a84f-5319-4da6-a382-230c8e355018)
-![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/49fdc173-fab8-44a2-b14e-a44413663b82)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/dfc2141d-6171-4059-bb01-a045558b8ceb)
+

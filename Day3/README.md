@@ -48,3 +48,20 @@ exit
 
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/e356e05b-de00-44ef-9a1a-73694760d771)
+
+## Lab - Suppressing host key checking while doing ssh into ansible nodes
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day3/playbooks
+cat ~/ansible.cfg
+ansible all -m ping
+cat ~/ansible.cfg
+ansible all -m ping
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/9688c1fd-b30d-4510-8b3a-71de5fcf27ee)
+
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/093cc89c-25f7-40c3-befb-f30f386970e0)
+

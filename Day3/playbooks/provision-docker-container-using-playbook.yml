@@ -8,8 +8,8 @@
   - name: Provision ubuntu containers
     docker_container:
       docker_host: tcp://localhost:4243
-      name: "ubuntu-00{{item}}"
-      hostname: "ubuntu-00{{item}}"
+      name: "ubuntu-{{item}}"
+      hostname: "ubuntu-{{item}}"
       image: "tektutor/ansible-ubuntu-node:latest"
       state: started 
       ports:
@@ -20,8 +20,8 @@
   - name: Provision centos containers
     docker_container:
       docker_host: tcp://localhost:4243
-      name: "centos-00{{item}}"
-      hostname: "centos-00{{item}}"
+      name: "centos-{{item}}"
+      hostname: "centos-{{item}}"
       image: "tektutor/ansible-centos-node:latest"
       state: started 
       ports:

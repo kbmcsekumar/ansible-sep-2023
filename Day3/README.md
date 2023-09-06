@@ -65,7 +65,13 @@ Expected output
 
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/093cc89c-25f7-40c3-befb-f30f386970e0)
 
-## Executing install nginx playbook in Ubuntu and CentOS ansible nodes in a conditional fashion
+## Lab - Executing install nginx playbook in Ubuntu and CentOS ansible nodes in a conditional fashion
+### Optional
+```
+docker cp centos1:/etc/nginx/nginx.conf .
+```
+
+Now you may proceed as shown below
 ```
 cd ~/ansible-sep-2023
 git pull
@@ -76,3 +82,20 @@ ansible-playbook install-ngxin-playbook.yml
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/ab70c95d-2ee4-4038-9b65-047120a31685)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/632ebd9d-0fd0-40a6-9e75-5ec46ca8dc28)
+
+## Lab - Understanding the refactored install nginx playbook
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day3/playbooks/after-refactoring
+ansible-playbook install-nginx-playbook.yml
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/9d37fe20-1e29-4aee-b896-60f066a321f3)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/5b056277-af02-4b96-adc0-33cc48bf8d2a)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/388189a7-86e0-444e-b6be-df12d44b8d1d)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/03e98ef7-55cf-41ae-9903-b439db8781d8)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/249feb41-028a-42a0-843c-8b7d9e86c358)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/a1d6d6a6-e3f2-46ea-ba91-013d72c5202f)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/b1ab05ce-346f-43d4-b5fb-3c9c82cbe30b)

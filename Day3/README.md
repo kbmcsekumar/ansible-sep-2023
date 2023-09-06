@@ -123,3 +123,16 @@ ansible-playbook passing-extra-arg-to-playbook.yml -e jdk_path=/usr/lib/jdk17
 
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/31c9e685-2eb5-40ef-8907-c9bc16346a93)
+
+## Lab - Invoking playbook from other playbook
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day3/playbooks
+ansible-playbook invoking-playbook-from-playbook.yml
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/d0a06519-f279-4771-8735-8cb70203e111)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/e8ed32d2-5ab1-499f-88a4-64e96c69e0ef)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/fcb023ee-8fa0-464e-b95b-6b878ee6a963)

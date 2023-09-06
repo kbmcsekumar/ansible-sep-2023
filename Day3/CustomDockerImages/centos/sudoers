@@ -1,0 +1,8 @@
+Defaults          env_reset
+
+root    ALL=(ALL) ALL
+%sudo  ALL=NOPASSWD: ALL
+%wheel ALL=(ALL) NOPASSWD: ALL
+
+# Members of the admin group may gain root  privileges
+%admin ALL=(ALL) ALL

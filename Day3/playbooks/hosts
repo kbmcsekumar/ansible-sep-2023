@@ -8,3 +8,9 @@ centos2 ansible_port=2004
 ansible_user=root
 ansible_host=localhost
 ansible_private_key_file=~/.ssh/id_rsa
+
+[ubuntu]
+ubuntu[1:2]
+
+[centos]
+centos[1:2]

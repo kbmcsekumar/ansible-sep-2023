@@ -1,0 +1,11 @@
+- name: First play
+  hosts: ubuntu
+  tasks:
+  - debug: msg="OS={{ansible_distribution}}"
+
+- name: Second play
+  hosts: centos 
+  tasks:
+  - debug: msg="OS={{ansible_distribution}}"
+
+

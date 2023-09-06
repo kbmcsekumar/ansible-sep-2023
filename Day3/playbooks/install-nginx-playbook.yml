@@ -1,18 +1,47 @@
 - name: This playbook will install nginx, configures custom path of web root folder and deploys custom web page
   hosts: all
+  gather_facts: yes 
+
   vars:
     - greeting_msg: "Welcome to DevOps!" 
     - conf_mgt_tool: Ansible
     - provisioner_tool: Docker
+
   tasks:
   - name: Install nginx in Ubuntu node
+    when: ( ansible_distribution == "Ubuntu" )
     apt: 
       name: nginx 
       state: latest 
       update_cache: yes
 
+  - name: Install Extra Packages for Enterprise Linux(epel) in CentOS node
+    when: ( ansible_distribution == "CentOS" )
+    yum: name=epel-release state=latest
+
+  - name: Install nginx in CentOS node
+    when: ( ansible_distribution == "CentOS" )
+    yum: name=nginx state=latest
+
   - name: Start nginx web server in Ubuntu nodes
+    when: ( ansible_distribution == "Ubuntu" )
     shell: service nginx start
+
+  - name: Check if nginx web server is already running in CentOS node
+    when: ( ansible_distribution == "CentOS" )
+    shell: curl localhost
+    register: output
+    ignore_errors: yes
+
+  - debug: var=output
+    when: ( ansible_distribution == "CentOS" )
+
+  - debug: msg="Task Failed = {{output.failed}}"
+    when: ( ansible_distribution == "CentOS" )
+
+  - name: Start nginx web server in CentOS nodes
+    when: ( ansible_distribution == "CentOS" and output.rc != 0)
+    shell: nginx
 
   - name: Create the custom web root folder
     file: path=/var/html state=directory mode=0755
@@ -20,8 +49,18 @@
   - name: Deploy custom html page
     template: src=index.html.j2 dest=/var/html/index.html
 
-  - name: Configure nginx web server to use our custom folder to pick the html pages
+  - name: Configure nginx web server to use our custom folder to pick the html pages in Ubuntu
+    when: ( ansible_distribution == "Ubuntu" )
     copy: src=default dest=/etc/nginx/sites-available/default
 
-  - name: Restart nginx web server to apply config changes
+  - name: Configure nginx web server to use our custom folder to pick the html pages in CentOS 
+    when: ( ansible_distribution == "CentOS" )
+    copy: src=nginx.conf dest=/etc/nginx/nginx.conf
+
+  - name: Restart nginx web server to apply config changes in Ubuntu
+    when: ( ansible_distribution == "Ubuntu" )
     shell: service nginx restart
+
+  - name: Restart nginx web server to apply config changes in CentOS 
+    when: ( ansible_distribution == "CentOS" )
+    shell: nginx -s reload 

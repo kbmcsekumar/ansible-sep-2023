@@ -17,6 +17,7 @@ git pull
 cd Day3/CustomDockerImages/centos
 cp ~/.ssh/id_rsa.pub authorized_keys
 docker build -t tektutor/ansible-centos-node:latest .
+docker images
 ```
 
 Expected output
@@ -24,3 +25,14 @@ Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/aa1a2846-7f61-4508-ac60-4bb9e628eafe)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/364387fc-3ad4-4fe9-8f58-e473aeca24c4)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/95acb054-0aaf-4909-94fd-c8bbd6442d5f)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/27a0d0b8-0943-4460-beaf-b243774e321b)
+
+## Lab - Creating centos1 and centos2 containers using the newly build custom centos docker image
+```
+docker images
+docker run -d --name centos1 --hostname centos1 -p 2003:22 -p 8003:80 tektutor/ansible-centos-node:latest
+docker run -d --name centos2 --hostname centos2 -p 2004:22 -p 8004:80 tektutor/ansible-centos-node:latest
+docker ps
+```
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/19b9a5c6-c594-447f-be03-579f5b02c938)

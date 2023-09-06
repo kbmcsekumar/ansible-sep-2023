@@ -177,4 +177,19 @@ Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/a1d838d1-f607-4b92-843d-7702defc81f6)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/4ce64f37-f1af-4f4f-9429-73126e912e96)
 
+## Lab - Using dynamic inventory in ansible playbooks
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day3/playbooks
+ansible-playbook install-nginx-playbook.yml
+```
 
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/897ca5c8-a483-41f8-b845-35486857d71c)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/160a873b-9bbf-4243-a99d-cbf73b75d409)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/ea336910-ebcf-4e1e-91d2-913279fbeda3)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/dc146de0-0cef-4c29-a5f9-dc59da6e655a)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/ef1869b5-fbfd-4fa7-aa57-7c3fea180698)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/e2a6d966-4a8f-4a4e-8cc1-456314b9531e)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/fa9da95e-52e3-469c-a979-f2ba4b9dadb7)

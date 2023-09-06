@@ -151,3 +151,17 @@ Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/bd84a84f-5319-4da6-a382-230c8e355018)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/dfc2141d-6171-4059-bb01-a045558b8ceb)
 
+## Lab - Using command module in ansible playbook
+When it prompts for password, type rps@12345
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day3/playbooks
+ansible-playbook using-command-module-in-playbook.yml --ask-become-pass
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/96c57cc4-b079-4311-8988-b942390a2392)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/9fcb5000-73cd-4c9c-8a72-c51995ebbe1a)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/da4ca6ee-07e8-41f7-8b6e-b4c00f44ffed)
+

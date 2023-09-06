@@ -174,6 +174,7 @@ ansible-playbook provision-docker-container-using-playbook.yml
 ```
 
 Expected output
-![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/112b51c3-3226-4dc0-aad1-2a1e8bb71639)
-![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/da6e18a8-d019-4d62-b83a-5bdaa7c7b6df)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/a1d838d1-f607-4b92-843d-7702defc81f6)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/4ce64f37-f1af-4f4f-9429-73126e912e96)
+
 

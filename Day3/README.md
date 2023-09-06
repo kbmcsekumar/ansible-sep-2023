@@ -100,7 +100,7 @@ Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/a1d6d6a6-e3f2-46ea-ba91-013d72c5202f)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/b1ab05ce-346f-43d4-b5fb-3c9c82cbe30b)
 
-## Lab - Limitting the playbook execution to a limitted ansible node(s)
+## Lab - Limitting the playbook execution only on specific ansible node/nodes
 ```
 cd ~/ansible-sep-2023
 git pull

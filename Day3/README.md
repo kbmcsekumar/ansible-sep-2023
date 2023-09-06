@@ -111,3 +111,15 @@ ansible-playbook install-nginx-playbook.yml --limit=ubuntu1
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/75869c1c-975b-4df0-bb6e-3ae87a1a4b9c)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/547ea67d-9241-4b4b-96dd-b61a42c6b77f)
+
+## Lab - Passing extra arguments to playbook
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day3/playbooks
+ansible-playbook passing-extra-arg-to-playbook.yml
+ansible-playbook passing-extra-arg-to-playbook.yml -e jdk_path=/usr/lib/jdk17
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/31c9e685-2eb5-40ef-8907-c9bc16346a93)

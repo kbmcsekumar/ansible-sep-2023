@@ -36,3 +36,15 @@ docker ps
 ```
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/19b9a5c6-c594-447f-be03-579f5b02c938)
+
+## Lab - Testing if we are able to SSH into the centos1 and centos2 containers
+```
+docker ps
+ssh -p 2003 root@localhost
+exit
+ssh -p 2004 root@localhost
+exit
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/e356e05b-de00-44ef-9a1a-73694760d771)

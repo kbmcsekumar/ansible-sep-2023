@@ -1,0 +1,2 @@
+- name: Configure nginx web server to use our custom folder to pick the html pages in CentOS 
+  copy: src=nginx.conf dest=/etc/nginx/nginx.conf

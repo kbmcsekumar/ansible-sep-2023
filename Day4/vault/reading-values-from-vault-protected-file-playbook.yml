@@ -3,7 +3,11 @@
 
   vars_files:
   - mysql-login-credential.yml
+  - oracle-login-credential.yml
 
   tasks:
-  - name: Retrieve values from vault protected file and print it
+  - name: Retrieve values from mysql vault protected file and print it
     debug: msg="Username={{username}} and Password={{password}}"
+
+  - name: Retrieve values from oraclevault protected file and print it
+    debug: msg="Username={{oracle_username}} and Password={{oracle_password}}"

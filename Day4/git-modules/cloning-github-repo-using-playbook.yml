@@ -1,0 +1,8 @@
+- name: Demonstrates cloning github repo
+  hosts: localhost
+  tasks:
+  - name: Clone the TekTutor GitHub repo
+    git:
+      repo: https://github.com/tektutor/spring-ms.git
+      dest: /tmp/spring-ms
+      version: master

@@ -269,3 +269,19 @@ ansible -i inventory -m win_ping
 
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/14e211ce-2403-4e72-80ca-25ff2c2908ff)
+
+# Lab - Installing choco.exe to enable playbook using win_chocolatey ansible module
+
+In your windows lab machine, using chrome browser download the below powershell, save this file in C:/Users/Administrator/Downloads folder.
+```
+https://community.chocolatey.org/install.ps1 
+```
+
+From windows command prompt, issue the below command
+```
+powershell.exe -ExecutionPolicy ByPass -File C:/Users/Administrator/Downloads/community.chocolatey.org_install.ps1
+```
+
+In case you got error, you will have to reboot the windows and try this again.
+
+Once it is installed successfully, you can try running the ansible-playbook as usual from Ubuntu lab machine.

@@ -43,6 +43,7 @@ https://github.com/ansible/ansible-documentation/blob/devel/examples/scripts/Con
 Now execute the below command
 ```
 powershell.exe -ExecutionPolicy ByPass -File C:/Users/Administrator/Downloads/ConfigureRemotingForAnsible.ps1
+
 winrm enumerate winrm/config/Listener
 ```
 

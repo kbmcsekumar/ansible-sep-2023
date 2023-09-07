@@ -86,6 +86,17 @@ Expected output
 The following options are supported by ansible-vault
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/098888ff-4aa7-4748-bbe6-14a00988a32e)
 
+## Lab - Creating a new vault protected file
+I have used root as my vault password.
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day4/vault
+ansible-vault create mysql-login-credentials.yml
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/19b11861-780f-4f97-9074-c30ce937c67c)
 
 ## Lab - Pinging a Windows ansible node
 

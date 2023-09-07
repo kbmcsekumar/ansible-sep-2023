@@ -5,7 +5,7 @@
     ansible.windows.win_reboot:
       msg: "Rebooting Windows 2019 Server ..."
       reboot_timeout: 600
-    async: 3 
+    async: 1 
     poll: 0
 
   - name: Wait for the machine to come back online

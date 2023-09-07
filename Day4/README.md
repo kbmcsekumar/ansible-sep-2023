@@ -155,6 +155,18 @@ ansible-vault rekey mysql-login-credentials.yml
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/1508dfd6-d560-484a-9c6b-763a1dcd7a70)
 
+## Lab - Accessing values stored within vault protected files safely from playbook
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day4/vault
+ansible-playbook reading-values-from-vault-protected-file-playbook.yml
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/bf4c319a-8b9c-43dd-b1e6-f3f5f561aee0)
+
+
 
 ## Lab - Pinging a Windows ansible node
 

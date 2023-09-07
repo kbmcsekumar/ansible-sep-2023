@@ -7,6 +7,8 @@
     poll: 0
     become: yes
     become_user: Administrator
+    become_password: rps@12345
+    become_method: runas
 
   - name: Wait for the machine to come back online
     wait_for_connection:

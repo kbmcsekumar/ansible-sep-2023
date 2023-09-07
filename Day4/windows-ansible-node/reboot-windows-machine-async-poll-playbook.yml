@@ -2,7 +2,7 @@
   hosts: all
   tasks:
   - name: Reboot windows ansible node
-    win_shell: Restart-Computer -Force
+    win_shell: Restart-Computer -ComputerName localhost -Force
     async: 1 
     poll: 0
 

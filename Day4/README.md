@@ -127,6 +127,22 @@ Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/e632a610-61e9-4ce4-b6ba-08e78fbdf689)
 
 
+## Lab - Encrypting plain text file or Decrypting existing vault protected file
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day4/vault
+cat mysql-login-credentials.yml
+ansible-vault decrypt mysql-login-credentials.yml
+cat mysql-login-credentials.yml
+ansible-vault encrypt mysql-login-credentials.yml
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/6748a48a-c345-4f75-af60-f690ee7952f3)
+
+
+
 ## Lab - Pinging a Windows ansible node
 
 Let's see what happens if we attempt to ping a windows ansible node

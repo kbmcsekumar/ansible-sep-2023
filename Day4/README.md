@@ -52,6 +52,28 @@ ansible-playbook print-gitconfig-playbook.yml
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/20503239-9815-461d-8774-07663111a1f0)
 
+## Lab - Using Ansible recommended folder structure
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day4/ansible-recommended-dir-structure
+tree
+cat host_vars/centos1
+cat host_vars/centos2
+cat host_vars/ubuntu1
+cat host_vars/ubuntu2
+cat group_vars/all
+
+ansible all -m ping
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/bb95a532-70d5-465a-8862-5f0c65d874b8)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/82ca9f9c-a69d-4297-ac1a-d5e66bdc71fa)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/51154927-b605-4dc3-9aad-774a333b345e)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/94d6abea-b2d1-4b9c-a0a3-14cb11dbf68c)
+
+
 ## Lab - Pinging a Windows ansible node
 
 Let's see what happens if we attempt to ping a windows ansible node

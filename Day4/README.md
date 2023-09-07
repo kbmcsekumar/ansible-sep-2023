@@ -169,6 +169,23 @@ Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/249d7db6-74c0-4ea3-bcfc-ca68e820867c)
 
 
+## Lab - Retrieving values from vault protected files picking the vault password from a hidden file 
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day4/vault
+cat mysql-login-credential.yml
+cat oracle-login-credential.yml
+cat ansible.cfg
+cat .password
+ansible-vault view oracle-login-credential.yml
+ansible-vault view mysql-login-credential.yml
+```
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/5c6f7370-9665-464d-8f9f-9c7f11bde7a3)
+
+
+
 ## Lab - Pinging a Windows ansible node
 
 Let's see what happens if we attempt to ping a windows ansible node

@@ -1,3 +1,7 @@
+## Reference 
+Other types of ansible loops
+https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_loops.html
+
 ## Lab - Using list variables in Ansible playbooks
 ```
 cd ~/ansible-sep-2023

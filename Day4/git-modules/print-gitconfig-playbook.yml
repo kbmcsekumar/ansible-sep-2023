@@ -1,0 +1,10 @@
+- name: Demonstrates use of git_config module in playbooks
+  hosts: localhost
+  tasks:
+  - name: Print the github global scope config values
+    git_config:
+      list_all: true
+      scope: global 
+    register: output
+
+  - debug: var=output

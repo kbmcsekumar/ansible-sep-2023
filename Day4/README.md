@@ -15,6 +15,18 @@ Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/562b85e7-f655-4f2b-85a3-bde102bf156a)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/74ca4e90-0fb2-410f-a5d8-4a8105812867)
 
+## Lab - Using dictionary variable in Ansible playbooks
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day4/loops
+ansible-playbook using-dictionary-in-playbook.yml
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/be380369-aa1e-4d11-a715-922d359cb026)
+
+
 
 ## Lab - Pinging a Windows ansible node
 

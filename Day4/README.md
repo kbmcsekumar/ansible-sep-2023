@@ -1,4 +1,17 @@
 # Configuring a Windows Ansible node
+
+Let's see what happens if we attempt to ping a windows ansible node
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day4/windows-ansible-node
+ansible -i inventory all -m ping
+```
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/2bd3f399-6bde-4751-b066-f4e1856e3d9c)
+
+
+
 ## Configuring Windows Ansible Node
 
 Windows Node Ansible Requirments	

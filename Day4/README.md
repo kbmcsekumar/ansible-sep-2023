@@ -41,6 +41,16 @@ ansible-playbook cloning-github-repo-using-playbook.yml
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/092617b4-f406-4c10-bfc6-2246eec74584)
 
+## Lab - Printing global git config 
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day4/git-modules
+ansible-playbook print-gitconfig-playbook.yml
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/20503239-9815-461d-8774-07663111a1f0)
 
 ## Lab - Pinging a Windows ansible node
 

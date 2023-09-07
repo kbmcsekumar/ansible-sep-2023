@@ -1,3 +1,7 @@
+## Reference 
+Other types of ansible loops
+https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_loops.html
+
 ## Lab - Using list variables in Ansible playbooks
 ```
 cd ~/ansible-sep-2023
@@ -26,6 +30,16 @@ ansible-playbook using-dictionary-in-playbook.yml
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/be380369-aa1e-4d11-a715-922d359cb026)
 
+## Lab - Cloning GitHub repo from ansible playbooks
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day4/git-modules
+ansible-playbook cloning-github-repo-using-playbook.yml
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/092617b4-f406-4c10-bfc6-2246eec74584)
 
 
 ## Lab - Pinging a Windows ansible node

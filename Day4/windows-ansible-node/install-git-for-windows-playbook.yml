@@ -4,4 +4,5 @@
   - name: Install git for windows
     win_chocolatey:
       name: git
-      state: latest
+      state: reinstalled 
+

@@ -74,6 +74,19 @@ Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/94d6abea-b2d1-4b9c-a0a3-14cb11dbf68c)
 
 
+## Ansible vault overview
+- used to securely save server login credentials in an encypted fashion
+- playbook can securely retrieve the vault protected values and use them
+- ansible-vault allows to create new vault file which is pass-protected
+- ansible-vault allows us to edit existing vault file which is pass-protected
+- ansible-vault allows us to view existing vault file which is pass-protected
+- ansible-vault allows to encrypt any existing text file with a password
+- ansible-vault allows to decrypt any existing vault protected file
+
+The following options are supported by ansible-vault
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/098888ff-4aa7-4748-bbe6-14a00988a32e)
+
+
 ## Lab - Pinging a Windows ansible node
 
 Let's see what happens if we attempt to ping a windows ansible node

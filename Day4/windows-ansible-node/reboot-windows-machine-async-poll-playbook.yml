@@ -2,9 +2,7 @@
   hosts: all
   tasks:
   - name: Reboot windows ansible node
-    ansible.windows.win_reboot:
-      msg: "Rebooting Windows 2019 Server ..."
-      reboot_timeout: 600
+    win_shell: Restart-Computer -Force
     async: 1 
     poll: 0
 

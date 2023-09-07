@@ -5,6 +5,8 @@
     win_shell: powershell.exe Restart-Computer -ComputerName localhost -Force
     async: 1 
     poll: 0
+    become: yes
+    become_user: Administrator
 
   - name: Wait for the machine to come back online
     wait_for_connection:

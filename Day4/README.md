@@ -169,9 +169,26 @@ Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/249d7db6-74c0-4ea3-bcfc-ca68e820867c)
 
 
+## Lab - Retrieving values from vault protected files picking the vault password from a hidden file 
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day4/vault
+cat mysql-login-credential.yml
+cat oracle-login-credential.yml
+cat ansible.cfg
+cat .password
+ansible-vault view oracle-login-credential.yml
+ansible-vault view mysql-login-credential.yml
+```
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/5c6f7370-9665-464d-8f9f-9c7f11bde7a3)
+
+
+
 ## Lab - Pinging a Windows ansible node
 
-Let's see what happens if we attempt to ping a windows ansible node
+Let's see what happens if we attempt to ping a windows ansible node ( try this in Ubuntu machine )
 ```
 cd ~/ansible-sep-2023
 git pull
@@ -236,12 +253,12 @@ Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/23e5d406-e105-4c12-8786-215df8af72a1)
 
 
-### On the Ansible Controller machine, make sure pywinrm is installed
+### On the Ansible Controller machine (Ubuntu machine), make sure pywinrm is installed
 ```
 pip install "pywinrm>=0.3.0"
 ```
 
-## Lab - Pinging a windows ansible node from a Linux Ansible Controller Machine
+## Lab - Pinging a windows ansible node from a Linux Ansible Controller Machine (try this in Ubuntu)
 ```
 cd ~/ansible-feb-2023
 git pull
@@ -252,3 +269,19 @@ ansible -i inventory -m win_ping
 
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/14e211ce-2403-4e72-80ca-25ff2c2908ff)
+
+# Lab - Installing choco.exe to enable playbook using win_chocolatey ansible module
+
+In your windows lab machine, using chrome browser download the below powershell, save this file in C:/Users/Administrator/Downloads folder.
+```
+https://community.chocolatey.org/install.ps1 
+```
+
+From windows command prompt, issue the below command
+```
+powershell.exe -ExecutionPolicy ByPass -File C:/Users/Administrator/Downloads/community.chocolatey.org_install.ps1
+```
+
+In case you got error, you will have to reboot the windows and try this again.
+
+Once it is installed successfully, you can try running the ansible-playbook as usual from Ubuntu lab machine.

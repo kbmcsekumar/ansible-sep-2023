@@ -253,12 +253,12 @@ Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/23e5d406-e105-4c12-8786-215df8af72a1)
 
 
-### On the Ansible Controller machine, make sure pywinrm is installed
+### On the Ansible Controller machine (Ubuntu machine), make sure pywinrm is installed
 ```
 pip install "pywinrm>=0.3.0"
 ```
 
-## Lab - Pinging a windows ansible node from a Linux Ansible Controller Machine
+## Lab - Pinging a windows ansible node from a Linux Ansible Controller Machine (try this in Ubuntu)
 ```
 cd ~/ansible-feb-2023
 git pull

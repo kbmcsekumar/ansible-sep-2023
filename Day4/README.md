@@ -1,4 +1,4 @@
-# Configuring a Windows Ansible node
+## Lab - Pinging a Windows ansible node
 
 Let's see what happens if we attempt to ping a windows ansible node
 ```
@@ -10,11 +10,9 @@ ansible -i inventory all -m ping
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/c80d079b-8ac5-4ace-b88c-7f06dc986e0e)
 
+### We need to configure WinRM connectivity in the Windows Ansible Node
 
-
-## Configuring Windows Ansible Node
-
-Windows Node Ansible Requirments	
+#### Windows Node Ansible Requirments	
 - PowerShell 3.0 or latest
 - .Net Framework 4.5 or latest
 

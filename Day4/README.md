@@ -74,6 +74,88 @@ Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/94d6abea-b2d1-4b9c-a0a3-14cb11dbf68c)
 
 
+## Ansible vault overview
+- used to securely save server login credentials in an encypted fashion
+- playbook can securely retrieve the vault protected values and use them
+- ansible-vault allows to create new vault file which is pass-protected
+- ansible-vault allows us to edit existing vault file which is pass-protected
+- ansible-vault allows us to view existing vault file which is pass-protected
+- ansible-vault allows to encrypt any existing text file with a password
+- ansible-vault allows to decrypt any existing vault protected file
+
+The following options are supported by ansible-vault
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/098888ff-4aa7-4748-bbe6-14a00988a32e)
+
+## Lab - Creating a new vault protected file
+I have used root as my vault password.
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day4/vault
+ansible-vault create mysql-login-credentials.yml
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/19b11861-780f-4f97-9074-c30ce937c67c)
+
+## Lab - Editing ansible-vault protected file
+You need to type root as the password while editing in case you are using the file that I created, otherwise you will have to type the password you gave at the time of creating the vault file.
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day4/vault
+ansible-vault edit mysql-login-credentials.yml
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/8a5bd632-16be-4f01-a21b-54c03f984b87)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/49f03fc5-38bc-467d-9f14-e3739432c7e3)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/d5d2ee11-1ecc-4964-bbd0-11444620a430)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/82ed2b39-e294-441a-be8f-ad553644d2db)
+
+
+## Lab - Displaying ansible-vault protected file values
+You need to type root as the password while editing in case you are using the file that I created, otherwise you will have to type the password you gave at the time of creating the vault file.
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day4/vault
+ansible-vault view mysql-login-credentials.yml
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/e632a610-61e9-4ce4-b6ba-08e78fbdf689)
+
+
+## Lab - Encrypting plain text file or Decrypting existing vault protected file
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day4/vault
+cat mysql-login-credentials.yml
+ansible-vault decrypt mysql-login-credentials.yml
+cat mysql-login-credentials.yml
+ansible-vault encrypt mysql-login-credentials.yml
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/6748a48a-c345-4f75-af60-f690ee7952f3)
+
+
+## Lab - Changing the password of an ansible vault protected file using rekey
+
+First type your existing password, followed by the new password and confirm the new password.
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day4/vault
+ansible-vault rekey mysql-login-credentials.yml
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/1508dfd6-d560-484a-9c6b-763a1dcd7a70)
+
+
 ## Lab - Pinging a Windows ansible node
 
 Let's see what happens if we attempt to ping a windows ansible node

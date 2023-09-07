@@ -285,3 +285,8 @@ powershell.exe -ExecutionPolicy ByPass -File C:/Users/Administrator/Downloads/co
 In case you got error, you will have to reboot the windows and try this again.
 
 Once it is installed successfully, you can try running the ansible-playbook as usual from Ubuntu lab machine.
+
+## Chocolatey portal URL
+<pre>
+https://community.chocolatey.org/packages  
+</pre>

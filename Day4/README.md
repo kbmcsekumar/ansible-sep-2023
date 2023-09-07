@@ -188,7 +188,7 @@ Expected output
 
 ## Lab - Pinging a Windows ansible node
 
-Let's see what happens if we attempt to ping a windows ansible node
+Let's see what happens if we attempt to ping a windows ansible node ( try this in Ubuntu machine )
 ```
 cd ~/ansible-sep-2023
 git pull

@@ -1,0 +1,10 @@
+- name: Install git in gui mode 
+  hosts: all 
+  tasks:
+    - name: Install git for windows 
+      win_psexec:
+        command: C:\Git-2.42.0.2-64-bit.exe 
+        executable: C:\Windows\PSTools\psexec.exe
+        interactive: yes
+        username: Administrator
+        password: rps@12345 

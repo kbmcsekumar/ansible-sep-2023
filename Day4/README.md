@@ -98,6 +98,21 @@ ansible-vault create mysql-login-credentials.yml
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/19b11861-780f-4f97-9074-c30ce937c67c)
 
+## Lab - Editing ansible-vault protected file
+You need to type root as the password while editing in case you are using the file that I created, otherwise you will have to type the password you gave at the time of creating the vault file.
+```
+git pull
+cd Day4/vault
+ansible-vault edit mysql-login-credentials.yml
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/8a5bd632-16be-4f01-a21b-54c03f984b87)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/49f03fc5-38bc-467d-9f14-e3739432c7e3)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/d5d2ee11-1ecc-4964-bbd0-11444620a430)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/82ed2b39-e294-441a-be8f-ad553644d2db)
+
+
 ## Lab - Pinging a Windows ansible node
 
 Let's see what happens if we attempt to ping a windows ansible node

@@ -1,0 +1,25 @@
+- name: Demonstrates using list variable in ansible playbooks
+  hosts: all 
+  vars:
+  - status: "Successfully executed"
+  - software_tools:
+    - vim
+    - tree
+    - net-tools
+    - iputils-ping
+  tasks:
+  - name: Install software tools in Ubuntu node 
+    when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
+    apt: name="{{item}}" state=latest update_cache=yes
+    with_list: "{{software_tools}}"
+    register: output
+
+  - debug: var=output
+
+  - debug: var=status
+    when: ( ansible_distribution == "Ubuntu")
+
+
+
+
+  

@@ -1,3 +1,21 @@
+## Lab - Using list variables in Ansible playbooks
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day4/loops
+ansible-playbook using-list-in-playbook.yml
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/1db1437c-7d05-4945-bcdc-4138f7cd4aa1)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/fec69a2c-0e8f-4c67-b091-0beb0581f785)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/16d7cadf-5868-47dc-a089-9b716a652d7c)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/c7989d2d-6f46-483b-9675-3c67e552d02f)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/6ef83cca-41eb-4172-b631-e8ee7ecd2ace)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/562b85e7-f655-4f2b-85a3-bde102bf156a)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/74ca4e90-0fb2-410f-a5d8-4a8105812867)
+
+
 ## Lab - Pinging a Windows ansible node
 
 Let's see what happens if we attempt to ping a windows ansible node

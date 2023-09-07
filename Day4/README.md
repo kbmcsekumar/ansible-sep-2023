@@ -101,6 +101,7 @@ Expected output
 ## Lab - Editing ansible-vault protected file
 You need to type root as the password while editing in case you are using the file that I created, otherwise you will have to type the password you gave at the time of creating the vault file.
 ```
+cd ~/ansible-sep-2023
 git pull
 cd Day4/vault
 ansible-vault edit mysql-login-credentials.yml
@@ -111,6 +112,19 @@ Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/49f03fc5-38bc-467d-9f14-e3739432c7e3)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/d5d2ee11-1ecc-4964-bbd0-11444620a430)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/82ed2b39-e294-441a-be8f-ad553644d2db)
+
+
+## Lab - Displaying ansible-vault protected file values
+You need to type root as the password while editing in case you are using the file that I created, otherwise you will have to type the password you gave at the time of creating the vault file.
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day4/vault
+ansible-vault view mysql-login-credentials.yml
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/e632a610-61e9-4ce4-b6ba-08e78fbdf689)
 
 
 ## Lab - Pinging a Windows ansible node

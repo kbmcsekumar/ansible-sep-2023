@@ -1,0 +1,9 @@
+- name: This playbook demonstrates rebooting windows ansible node
+  hosts: all
+  tasks:
+  - name: Reboot windows ansible node
+    ansible.windows.win_reboot:
+      msg: "Rebooting Windows 2019 Server ..."
+      pre_reboot_delay: 10
+      post_reboot_delay: 30
+      reboot_timeout: 600

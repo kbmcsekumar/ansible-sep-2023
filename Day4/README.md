@@ -142,6 +142,19 @@ Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/6748a48a-c345-4f75-af60-f690ee7952f3)
 
 
+## Lab - Changing the password of an ansible vault protected file using rekey
+
+First type your existing password, followed by the new password and confirm the new password.
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day4/vault
+ansible-vault rekey mysql-login-credentials.yml
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/1508dfd6-d560-484a-9c6b-763a1dcd7a70)
+
 
 ## Lab - Pinging a Windows ansible node
 

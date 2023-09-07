@@ -79,10 +79,4 @@ ansible -i inventory -m win_ping
 ```
 
 Expected output
-<pre>
-jegan@tektutor.org $ <b>ansible -i inventory all -m win_ping</b>
-192.168.180.130 | SUCCESS => {
-    "changed": false,
-    "ping": "pong"
-}
-</pre>
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/14e211ce-2403-4e72-80ca-25ff2c2908ff)

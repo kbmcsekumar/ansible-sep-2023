@@ -1,8 +1,53 @@
 - name: Install git for windows using win_chocolatey module
   hosts: all
   tasks:
+  - name: Uninstall git for windows
+    win_chocolatey:
+      name: git
+      state: absent 
+
+  - name: Cleanup chocolatey git entries just in case it isn't removed properly
+    win_shell: |
+      $value = Test-Path -Path C:\ProgramData\chocolatey\lib\git
+
+      if ($value) {
+         Remove-Item -Path C:\ProgramData\chocolatey\lib\git -Recurse -Force -EA SilentlyContinue -Verbose
+      }
+    ignore_errors: yes
+
+  - name: Cleanup chocolatey git entries just in case it isn't removed properly
+    win_shell: |
+      $value = Test-Path -Path C:\ProgramData\chocolatey\lib\git.install
+      if ($value) {
+        Remove-Item -Path C:\ProgramData\chocolatey\lib\git.install -Recurse -Force -EA SilentlyContinue -Verbose
+      }
+    ignore_errors: yes
+
+  - name: Cleanup chocolatey git entries just in case it isn't removed properly
+    win_shell: |
+      $value = Test-Path -Path C:\ProgramData\chocolatey\.chocolatey\git.2.42.0
+      if ($value) {
+        Remove-Item -Path C:\ProgramData\chocolatey\.chocolatey\git.2.42.0 -Recurse -Force -EA SilentlyContinue -Verbose
+      }
+    ignore_errors: yes
+
+  - name: Cleanup chocolatey git entries just in case it isn't removed properly
+    win_shell: |
+      $value = Test-Path -Path C:\ProgramData\chocolatey\.chocolatey\git.install.2.42.0
+      if ($value) {
+        Remove-Item -Path C:\ProgramData\chocolatey\.chocolatey\git.install.2.42.0 -Recurse -Force -EA SilentlyContinue -Verbose
+      }
+    ignore_errors: yes
+
+  - name: Reboot windows
+    win_reboot:
+      pre_reboot_delay: 10
+      post_reboot_delay: 15
+      reboot_timeout: 600
+      msg: "Rebooting windows server 2019"
+
   - name: Install git for windows
     win_chocolatey:
       name: git
-      state: reinstalled 
-
+      state: latest 
+      force: yes

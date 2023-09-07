@@ -1,0 +1,9 @@
+- name: Demonstrates retrieving values from vault protected file
+  hosts: localhost
+
+  vars_files:
+  - mysql-login-credential.yml
+
+  tasks:
+  - name: Retrieve values from vault protected file and print it
+    debug: msg="Username={{username}} and Password={{password}}"

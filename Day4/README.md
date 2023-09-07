@@ -1,13 +1,28 @@
-# Configuring a Windows Ansible node
-## Configuring Windows Ansible Node
+## Lab - Pinging a Windows ansible node
 
-Windows Node Ansible Requirments	
+Let's see what happens if we attempt to ping a windows ansible node
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day4/windows-ansible-node
+ansible -i inventory all -m ping
+```
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/c80d079b-8ac5-4ace-b88c-7f06dc986e0e)
+
+### We need to configure WinRM connectivity in the Windows Ansible Node
+
+#### Windows Node Ansible Requirments	
 - PowerShell 3.0 or latest
 - .Net Framework 4.5 or latest
 
-### Finding PowerShell version
-
+### Finding PowerShell version from Windows Powershell prompt
+```
 $PSVersionTable
+```
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/a9722c67-f55f-482c-a4f1-1fa4beb95b1b)
+
 
 ### Finding .Net Framework Version
 
@@ -15,17 +30,26 @@ $PSVersionTable
 
 2. HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full
 
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/8d97cfef-0cc0-4d81-a303-1d7d1d6ca7ac)
+
+
 ### Configuring WinRM on Windows machine
+Download the file at below URL and save it in C:/Users/Administrator/Downloads/ConfigureRemotingForAnsible.ps1
 ```
-$url = "https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1"
+https://github.com/ansible/ansible-documentation/blob/devel/examples/scripts/ConfigureRemotingForAnsible.ps1
+```
 
-$file = "$env:temp\ConfigureRemotingForAnsible.ps1"
+Now execute the below command
+```
+powershell.exe -ExecutionPolicy ByPass -File C:/Users/Administrator/Downloads/ConfigureRemotingForAnsible.ps1
+
+winrm enumerate winrm/config/Listener
 ```
 
-(New-Object -TypeName System.Net.WebClient).DownloadFile($url, $file)
-```
-powershell.exe -ExecutionPolicy ByPass -File $file
-```
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/08821a8e-2b7b-47d7-8ab9-6b8581781ae1)
+
 
 ### Configuring Windows node with Basic authentication
 ```
@@ -36,6 +60,10 @@ Set-Item -Path WSMan:\localhost\Service\Auth\Basic -Value $true
 ```
 winrm enumerate winrm/config/Listener
 ```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/23e5d406-e105-4c12-8786-215df8af72a1)
+
 
 ### On the Ansible Controller machine, make sure pywinrm is installed
 ```
@@ -52,10 +80,4 @@ ansible -i inventory -m win_ping
 ```
 
 Expected output
-<pre>
-jegan@tektutor.org $ <b>ansible -i inventory all -m win_ping</b>
-192.168.180.130 | SUCCESS => {
-    "changed": false,
-    "ping": "pong"
-}
-</pre>
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/14e211ce-2403-4e72-80ca-25ff2c2908ff)

@@ -4,5 +4,5 @@
 [windows:vars]
 ansible_connection=winrm
 ansible_user=Administrator
-ansible_password=Admin@123
+ansible_password=rps@12345
 ansible_winrm_server_cert_validation=ignore

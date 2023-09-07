@@ -8,6 +8,7 @@ cd Day4/windows-ansible-node
 ansible -i inventory all -m ping
 ```
 Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/c80d079b-8ac5-4ace-b88c-7f06dc986e0e)
 
 
 

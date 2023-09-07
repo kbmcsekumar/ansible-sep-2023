@@ -16,7 +16,7 @@ Expected output
 - PowerShell 3.0 or latest
 - .Net Framework 4.5 or latest
 
-### Finding PowerShell version from Powershell prompt
+### Finding PowerShell version from Windows Powershell prompt
 ```
 $PSVersionTable
 ```

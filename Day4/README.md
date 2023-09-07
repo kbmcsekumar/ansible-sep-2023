@@ -16,9 +16,13 @@ Expected output
 - PowerShell 3.0 or latest
 - .Net Framework 4.5 or latest
 
-### Finding PowerShell version
-
+### Finding PowerShell version from Powershell prompt
+```
 $PSVersionTable
+```
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/a9722c67-f55f-482c-a4f1-1fa4beb95b1b)
+
 
 ### Finding .Net Framework Version
 

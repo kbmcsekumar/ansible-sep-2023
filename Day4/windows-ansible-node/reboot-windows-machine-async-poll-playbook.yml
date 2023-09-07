@@ -1,5 +1,8 @@
 - name: This playbook demonstrates rebooting windows ansible node
   hosts: all
+  become_method: runas
+  vars:
+  - ansible_become_password: rps@12345
   tasks:
   - name: Reboot windows ansible node
     win_shell: powershell.exe Restart-Computer -ComputerName localhost -Force
@@ -7,8 +10,6 @@
     poll: 0
     become: yes
     become_user: Administrator
-    become_password: rps@12345
-    become_method: runas
 
   - name: Wait for the machine to come back online
     wait_for_connection:

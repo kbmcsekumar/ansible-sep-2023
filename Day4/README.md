@@ -166,6 +166,7 @@ ansible-playbook reading-values-from-vault-protected-file-playbook.yml  --ask-va
 Expected output
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/bf4c319a-8b9c-43dd-b1e6-f3f5f561aee0)
 ![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/1ffea681-3c71-41d8-b3bb-655bc9cec0dd)
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/249d7db6-74c0-4ea3-bcfc-ca68e820867c)
 
 
 ## Lab - Pinging a Windows ansible node

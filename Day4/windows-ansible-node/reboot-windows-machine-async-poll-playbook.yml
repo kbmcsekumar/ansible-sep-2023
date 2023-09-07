@@ -6,7 +6,7 @@
   tasks:
   - name: Reboot windows ansible node
     win_shell: powershell.exe Restart-Computer -ComputerName localhost -Force
-    async: 1 
+    async: 5 
     poll: 0
     become: yes
     become_user: Administrator

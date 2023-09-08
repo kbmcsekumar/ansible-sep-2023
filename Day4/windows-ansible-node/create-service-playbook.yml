@@ -90,8 +90,8 @@
     win_chocolatey:
       name: nssm
       state: present
-      become: yes
-      become_user: Administrator
+    become: yes
+    become_user: Administrator
 
   - name: Delete HelloMicroservice service
     win_shell: nssm remove HelloMS confirm

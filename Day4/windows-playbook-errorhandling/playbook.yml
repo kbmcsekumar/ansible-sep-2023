@@ -3,5 +3,10 @@
   tasks:
   - block:
     - include: tasks.yml 
+      register: output
+      changed_when: output.rc == 0 
+    always:
+    - debug: msg="Always gets executed"
     rescue:
     - debug: msg="Some error occurred ..."
+

@@ -74,7 +74,7 @@
 
   - name: Clone TekTutor spring-boot sample application
     ansible.windows.win_git:
-      repo: "https://github.com/tektutor/spring-ms.git"
-      dest: "C:\"
-      branch: master
+      repo: https://github.com/tektutor/spring-ms.git
+      dest: C:\
       update: yes
+      replace_dest: no

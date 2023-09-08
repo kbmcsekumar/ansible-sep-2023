@@ -73,8 +73,12 @@
       timeout: 600
 
   - name: Clone TekTutor spring-boot sample application
-    ansible.windows.win_git:
-      repo: https://github.com/tektutor/spring-ms.git
-      dest: C:\
-      update: yes
-      replace_dest: no
+    - name: clone repositories
+      win_command: >
+        "C:\Program Files\Git\bin\git.exe"
+        "clone"
+        "http://github.com/tektutor/spring-ms.git"
+        "C:\"
+        "--branch"
+        "master"
+        "--recursive

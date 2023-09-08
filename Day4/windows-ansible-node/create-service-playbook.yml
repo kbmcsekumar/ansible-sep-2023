@@ -80,4 +80,5 @@
       "C:\spring-ms"
       "--branch"
       "master"
-      "--recursive
+      "--recursive"
+      "true"

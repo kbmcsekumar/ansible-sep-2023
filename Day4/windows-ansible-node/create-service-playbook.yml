@@ -73,11 +73,11 @@
       timeout: 600
 
   - name: Clone TekTutor spring-boot sample application
-      win_command: |
-        "C:\Program Files\Git\bin\git.exe"
-        "clone"
-        "http://github.com/tektutor/spring-ms.git"
-        "C:\"
-        "--branch"
-        "master"
-        "--recursive
+    win_command: |
+      "C:\Program Files\Git\bin\git.exe"
+      "clone"
+      "http://github.com/tektutor/spring-ms.git"
+      "C:\"
+      "--branch"
+      "master"
+      "--recursive

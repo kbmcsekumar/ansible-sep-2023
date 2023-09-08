@@ -80,8 +80,9 @@
     ignore_errors: yes
 
   - name: Build the maven project
-    win_shell: mvn clean package
-       chdir: C:\Users\Administrator\spring-ms
+    win_shell: |
+       cd C:\Users\Administrator\spring-ms
+       mvn clean package
 
   - name: Create HelloMicroservice service for our custom spring-boot java application
     ansible.windows.win_service:

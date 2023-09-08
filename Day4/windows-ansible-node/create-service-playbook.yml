@@ -71,3 +71,12 @@
       sleep: 5
       delay: 5 
       timeout: 600
+
+  - name: Clone TekTutor spring-boot sample application
+    win_git:
+      repo: "https://github.com/tektutor/spring-ms.git"
+      dest: "C:\"
+      branch: master
+      update: yes 
+      recursive: yes
+      replace_dest: no 

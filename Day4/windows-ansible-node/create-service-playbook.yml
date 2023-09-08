@@ -31,7 +31,7 @@
     ansible.windows.win_path:
       elements:
         - '%JDK_HOME%\bin'
-      scope: system
+      scope: machine 
       state: present
 
   - name: Download the Maven 3.9.4 zip file

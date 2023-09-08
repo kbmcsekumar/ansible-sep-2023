@@ -77,7 +77,7 @@
       "C:\Program Files\Git\bin\git.exe"
       "clone"
       "http://github.com/tektutor/spring-ms.git"
-      "C:\"
+      "C:\spring-ms"
       "--branch"
       "master"
       "--recursive

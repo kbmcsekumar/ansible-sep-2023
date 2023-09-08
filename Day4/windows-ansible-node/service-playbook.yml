@@ -1,0 +1,42 @@
+- name: Demonstrates installing JDK, Maven, git-clone, building application jar and creating a windows service
+  hosts: all
+  become_method: runas
+  vars:
+  - ansible_become_password: !vault |
+     $ANSIBLE_VAULT;1.1;AES256
+     38353536643231323233376261333836653035323035643366326437396338643665323634613963
+     6336353433323561393063663261613564626231656636620a653663656566323735643833383464
+     64386562306537313462636233343566663639356265373333643863373563633133356136373866
+     3333316630626634610a353230313534646361353266396639663666323534633536393166366436
+     6632
+
+  tasks:
+  - name: Install nssm service manager 
+    win_chocolatey:
+      name: nssm
+      state: present
+      become: yes
+      become_user: Administrator
+
+  - name: Delete HelloMicroservice service
+    win_shell: nssm remove HelloMicroservice confirm
+    ignore_errors: yes
+
+  - name: Create HelloMicroservice service for our custom spring-boot java application
+    win_shell: |
+      nssm install HelloMS Confirm
+      nssm set HelloMS Application C:\openjdk20\jdk-20.0.2\bin\java.exe
+      nssm set HelloMS AppDirectory C:\Users\Administrator\spring-ms\target
+      nssm set HelloMS AppParameters "-Xmx256m -jar spring-hello-1.0.jar"
+      nssm set HelloMS DisplayName Hello 
+      nssm set HelloMS Description TekTutor - Sample SpringBoot Microservice application
+      nssm set HelloMS Start SERVICE_AUTO_START
+      nssm set HelloMS ObjectName LocalSystem
+      nssm set HelloMS Type SERVICE_WIN32_OWN_PROCESS
+    become: yes
+    become_user: Administrator
+
+  - name: Start HelloMS service 
+    win_shell: nssm start HelloMS Confirm
+    become: yes
+    become_user: Administrator

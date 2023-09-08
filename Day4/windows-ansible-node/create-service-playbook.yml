@@ -84,19 +84,32 @@
        cd C:\Users\Administrator\spring-ms
        mvn clean package
 
+  - name: Install nssm service manager 
+    win_chocolatey:
+      name: nssm
+      state: present
+      become: yes
+      become_user: Administrator
+
+  - name: Delete HelloMicroservice service
+    win_shell: nssm remove HelloMS confirm
+    ignore_errors: yes
+
   - name: Create HelloMicroservice service for our custom spring-boot java application
-    ansible.windows.win_service:
-      name: HelloMicroservice
-      path: C:\\openjdk20\\jdk-20.0.2\\bin\\java.exe -Xmx256m -jar C:\\Users\\Administrator\\spring-ms\\target\\spring-hello-1.0.jar
-      display_name: "Hello Microservice" 
-      description: TekTutor SpringBoot Sample Microservice app 
+    win_shell: |
+      nssm install HelloMS Confirm
+      nssm set HelloMS Application C:\openjdk20\jdk-20.0.2\bin\java.exe
+      nssm set HelloMS AppDirectory C:\Users\Administrator\spring-ms\target
+      nssm set HelloMS AppParameters "-Xmx256m -jar spring-hello-1.0.jar"
+      nssm set HelloMS DisplayName Hello 
+      nssm set HelloMS Description TekTutor - Sample SpringBoot Microservice application
+      nssm set HelloMS Start SERVICE_AUTO_START
+      nssm set HelloMS ObjectName LocalSystem
+      nssm set HelloMS Type SERVICE_WIN32_OWN_PROCESS
     become: yes
     become_user: Administrator
 
-  - name: Set service startup mode to auto and ensure it is started
-    ansible.windows.win_service:
-      name: "HelloMicroservice" 
-      start_mode: manual 
-      state: started
+  - name: Start HelloMS service 
+    win_shell: nssm start HelloMS Confirm
     become: yes
     become_user: Administrator

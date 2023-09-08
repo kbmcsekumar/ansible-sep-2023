@@ -10,6 +10,12 @@
           3333316630626634610a353230313534646361353266396639663666323534633536393166366436
           6632
   tasks:
+
+  - name: Install winget windows package manager
+    win_shell: powershell.exe Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe
+    become: yes
+    become_user: Administrator
+
   - name: Install OpenJDK 17
     win_shell: winget install Microsoft.OpenJDK.17
     become: yes

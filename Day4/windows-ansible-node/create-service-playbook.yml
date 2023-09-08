@@ -73,7 +73,11 @@
       timeout: 600
 
   - name: Clone TekTutor spring-boot sample application
-    win_shell: git clone https://github.com/tektutor/spring-ms C:\Users\Administrator\spring-ms
+    win_shell: |
+      cd C:\Users\Administrator
+      rmdir /s /q spring-ms
+      git clone https://github.com/tektutor/spring-ms C:\Users\Administrator\spring-ms
+    ignore_errors: yes
 
   - name: Build the maven project
     win_shell: mvn clean package

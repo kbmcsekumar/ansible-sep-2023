@@ -30,14 +30,9 @@
   - name: Add JDK_HOME into system path 
     ansible.windows.win_path:
       elements:
-        - 'C:\openjdk20\jdk-20.0.2\bin'
-
-  - name: Ensure that JDK executables are in user path 
-    ansible.windows.win_path:
-      name:  PATH 
-      elements: 'C:\openjdk20\jdk-20.0.2\bin'
-      scope: user
-      state: present 
+        - '%JDK_HOME%\bin'
+      scope: system
+      state: present
 
   - name: Download the Maven 3.9.4 zip file
     win_get_url:
@@ -50,7 +45,7 @@
       dest: C:\maven
 
   - name: Add M2_HOME environment variable into system environment
-    ansible.windows.win_path:
+    ansible.windows.win_environment:
       state: present
       name: M2_HOME
       value: C:\maven\apache-maven-3.9.4
@@ -60,13 +55,8 @@
     ansible.windows.win_path:
       elements:
         - '%M2_HOME%\bin'
-
-  - name: Ensure that M2_HOME executables are in user path 
-    ansible.windows.win_path:
-      name:  PATH 
-      elements: '%M2_HOME%\bin'
-      scope: user
-      state: present 
+      scope: system
+      state: present
 
   - name: Reboot windows ansible node before using maven
     win_shell: powershell.exe Restart-Computer -ComputerName localhost -Force

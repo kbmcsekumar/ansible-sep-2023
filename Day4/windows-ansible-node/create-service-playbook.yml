@@ -19,3 +19,15 @@
     win_unzip:
       src: C:\openjdk20.zip
       dest: C:\openjdk20
+
+  - name: Add JDK_HOME environment variable for OpenJDK 20
+    ansible.windows.win_environment:
+      state: present
+      name: JDK_HOME 
+      value: C:\openjdk20\jdk-20.0.2 
+      level: machine
+
+  - name: Add JDK_HOME into system path 
+    ansible.windows.win_path:
+      elements:
+      - '%JDK_HOME%\bin'

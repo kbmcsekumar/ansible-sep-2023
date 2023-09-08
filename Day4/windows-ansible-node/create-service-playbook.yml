@@ -1,0 +1,16 @@
+- name: Demonstrates installing JDK, Maven, git-clone, building application jar and creating a windows service
+  hosts: all
+  become_method: runas
+  vars:
+  - ansible_become_password: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          38353536643231323233376261333836653035323035643366326437396338643665323634613963
+          6336353433323561393063663261613564626231656636620a653663656566323735643833383464
+          64386562306537313462636233343566663639356265373333643863373563633133356136373866
+          3333316630626634610a353230313534646361353266396639663666323534633536393166366436
+          6632
+  tasks:
+  - name: Install OpenJDK 17
+    win_shell: winget install Microsoft.OpenJDK.17
+    become: yes
+    become_user: Administrator

@@ -1,0 +1,11 @@
+- hosts: localhost
+  tasks:
+  - name: store the contents of foo.txt in the 'out' variable
+    shell: cat env.txt
+    register: output
+
+  - debug: var=output
+
+  - debug: msg="{{ output.stdout | regex_search('qa', ignorecase=True) }}"
+  - debug: msg="{{ output.stdout | regex_search('.*dev.*', multiline=True, ignorecase=True) }}"
+  - debug: msg="{{ output.stdout | regex_search('prod.*', multiline=True, ignorecase=True) }}"

@@ -1,0 +1,34 @@
+---
+  people:
+    - name: Sashi 
+      fav_colour: Blue
+    - name: Mandar 
+      fav_colour: Yellow
+    - name: Sathya 
+      fav_colour: Blue
+    - name: Kumar 
+      fav_colour: Yellow
+    - name: Hari 
+      fav_colour: Yellow
+    - name: Manoj 
+      fav_colour: Orange
+
+  colours:
+    - name: Blue
+      things:
+        - Sky
+        - Sea
+        - Jeans
+    - name: Yellow
+      things:
+        - Egg yolk
+        - Taxi
+        - Banana
+        - Lemon
+        - Sun
+    - name: Orange
+      things:
+        - Pumpkin
+        - Basketball
+        - Carrots
+        - Oranges

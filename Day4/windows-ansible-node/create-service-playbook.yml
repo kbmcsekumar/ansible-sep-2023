@@ -41,10 +41,29 @@
 
   - name: Download the Maven 3.9.4 zip file
     win_get_url:
-      url: https://dlcdn.apache.org/maven/maven-3/3.9.4/source/apache-maven-3.9.4-src.zip
+      url: https://dlcdn.apache.org/maven/maven-3/3.9.4/binaries/apache-maven-3.9.4-bin.zip 
       dest: C:\maven.zip
 
   - name: Unzip Maven 3.9.4
     win_unzip:
       src: C:\maven.zip
       dest: C:\maven
+
+  - name: Add M2_HOME environment variable into system environment
+    ansible.windows.win_path:
+      state: present
+      name: M2_HOME
+      value: C:\maven\apache-maven-3.9.4
+      level: machine
+
+  - name: Add M2_HOME bin into system path 
+    ansible.windows.win_path:
+      elements:
+        - '%M2_HOME%\bin'
+
+  - name: Ensure that M2_HOME executables are in user path 
+    ansible.windows.win_path:
+      name:  PATH 
+      elements: '%M2_HOME%\bin'
+      scope: user
+      state: present 

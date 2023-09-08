@@ -84,7 +84,19 @@
     #  "true"
     #
 
-  - name: Create a service for our custom spring-boot java application
-    win_shell: |
-      New-Service -Name "Hello Microservice" -BinaryPathName "java -Xmx256m -jar C:\Users\Administrator\spring-ms\target\spring-hello-1.0.jar"  
-      Start-Service -Name "Hello Microservice"  
+  - name: Create HelloMicroservice service for our custom spring-boot java application
+    ansible.windows.win_service:
+      name: "HelloMicroservice"
+      path: "java -Xmx256m -jar C:\Users\Administrator\spring-ms\target\spring-hello-1.0.jar"
+      display_name: "Hello Microservice" 
+      description: TekTutor SpringBoot Sample Microservice app 
+    become: yes
+    become_user: Administrator
+
+  - name: Set service startup mode to auto and ensure it is started
+    ansible.windows.win_service:
+      name: "HelloMicroservice" 
+      start_mode: auto
+      state: started
+    become: yes
+    become_user: Administrator

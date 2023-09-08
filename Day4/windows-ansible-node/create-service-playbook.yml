@@ -85,7 +85,7 @@
     win_shell: |
        cd C:\Users\Administrator\spring-ms
        mvn clean package
-    ignore_errors:yes
+    ignore_errors: yes
 
   - name: Install nssm service manager 
     win_chocolatey:

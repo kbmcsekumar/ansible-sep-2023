@@ -19,6 +19,7 @@
     win_unzip:
       src: C:\openjdk20.zip
       dest: C:\openjdk20
+    ignore_errors: yes
 
   - name: Add JDK_HOME environment variable for OpenJDK 20
     ansible.windows.win_environment:
@@ -43,6 +44,7 @@
     win_unzip:
       src: C:\maven.zip
       dest: C:\maven
+    ignore_errors: yes
 
   - name: Add M2_HOME environment variable into system environment
     ansible.windows.win_environment:

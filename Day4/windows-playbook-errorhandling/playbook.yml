@@ -1,0 +1,7 @@
+- name: Demonstrates error handling in playbooks
+  hosts: all
+  tasks:
+  - block:
+    - include: tasks.yml 
+    rescue:
+    - debug: msg="Some error occurred ..."

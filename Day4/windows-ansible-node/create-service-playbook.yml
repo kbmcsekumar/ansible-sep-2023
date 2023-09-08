@@ -55,7 +55,7 @@
     ansible.windows.win_path:
       elements:
         - '%M2_HOME%\bin'
-      scope: system
+      scope: machine 
       state: present
 
   - name: Reboot windows ansible node before using maven

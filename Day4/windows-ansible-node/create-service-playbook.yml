@@ -78,5 +78,3 @@
       dest: "C:\"
       branch: master
       update: yes 
-      recursive: yes
-      replace_dest: no 

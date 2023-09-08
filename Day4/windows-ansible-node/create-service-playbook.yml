@@ -73,7 +73,6 @@
       timeout: 600
 
   - name: Clone TekTutor spring-boot sample application
-    - name: clone repositories
       win_command: >
         "C:\Program Files\Git\bin\git.exe"
         "clone"

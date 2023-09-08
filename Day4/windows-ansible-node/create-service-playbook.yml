@@ -72,12 +72,7 @@
       delay: 5 
       timeout: 600
 
-  - name: Clone TekTutor spring-boot sample application
-    git:
-      repo: https://github.com/tektutor/spring-ms.git
-      clone: yes
-      version: main
-      dest: C:/spring
+    # - name: Clone TekTutor spring-boot sample application
     #    win_command: |
     #  "C:\Program Files\Git\bin\git.exe"
     #  "clone"
@@ -87,3 +82,9 @@
     #  "master"
     #  "--recursive"
     #  "true"
+    #
+
+  - name: Create a service for our custom spring-boot java application
+    win_shell: |
+      New-Service -Name "Hello Microservice" -BinaryPathName "java -jar C:\Users\Administrator\spring-ms\target\spring-hello-1.0.jar"  
+      Start-Service -Name "Hello Microservice"  

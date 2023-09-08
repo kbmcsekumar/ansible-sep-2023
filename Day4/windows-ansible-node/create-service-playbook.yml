@@ -76,9 +76,8 @@
     win_shell: git clone https://github.com/tektutor/spring-ms C:\Users\Administrator\spring-ms
 
   - name: Build the maven project
-    win_shell:
+    win_shell: mvn clean package
        chdir: C:\Users\Administrator\spring-ms
-       executable: mvn clean package 
 
   - name: Create HelloMicroservice service for our custom spring-boot java application
     ansible.windows.win_service:

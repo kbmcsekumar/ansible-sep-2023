@@ -26,6 +26,6 @@
     become_user: Administrator
 
   - name: Install OpenJDK 17
-    win_shell: winget install Microsoft.OpenJDK.17
+    win_shell: powershell.exe winget install Microsoft.OpenJDK.17
     become: yes
     become_user: Administrator

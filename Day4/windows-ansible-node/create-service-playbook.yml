@@ -10,22 +10,7 @@
           3333316630626634610a353230313534646361353266396639663666323534633536393166366436
           6632
   tasks:
-
-  - name: Install winget windows package manager
-    win_shell: | 
-      $progressPreference = 'silentlyContinue'
-      Write-Information "Downloading WinGet and its dependencies..."
-      Invoke-WebRequest -Uri https://aka.ms/getwinget -OutFile Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle
-      Invoke-WebRequest -Uri https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx -OutFile Microsoft.VCLibs.x64.14.00.Desktop.appx
-      Invoke-WebRequest -Uri https://github.com/microsoft/microsoft-ui-xaml/releases/download/v2.7.3/Microsoft.UI.Xaml.2.7.x64.appx -OutFile Microsoft.UI.Xaml.2.7.x64.appx
-      Add-AppxPackage Microsoft.VCLibs.x64.14.00.Desktop.appx
-      Add-AppxPackage Microsoft.UI.Xaml.2.7.x64.appx
-      Add-AppxPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle
-
-    become: yes
-    become_user: Administrator
-
-  - name: Install OpenJDK 17
-    win_shell: powershell.exe winget install Microsoft.OpenJDK.17
-    become: yes
-    become_user: Administrator
+  - name: Download the OpenJDK 20 zip file 
+    win_get_url:
+      url:  https://download.java.net/java/GA/jdk20.0.2/6e380f22cbe7469fa75fb448bd903d8e/9/GPL/openjdk-20.0.2_windows-x64_bin.zip
+      dest: C:\openjdk20.zip

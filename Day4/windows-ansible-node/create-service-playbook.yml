@@ -78,7 +78,7 @@
   - name: Build the maven project
     win_shell:
        chdir: C:\Users\Administrator\spring-ms
-       mvn clean package 
+       executable: mvn clean package 
 
   - name: Create HelloMicroservice service for our custom spring-boot java application
     ansible.windows.win_service:

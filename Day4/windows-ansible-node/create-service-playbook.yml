@@ -34,7 +34,7 @@
 
   - name: Ensure that JDK executables are in user path 
     ansible.windows.win_path:
-      name: JDK 
+      name:  PATH 
       elements: C:\openjdk20\jdk-20.0.2\bin
       scope: user
       state: present 

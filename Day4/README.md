@@ -290,3 +290,83 @@ Once it is installed successfully, you can try running the ansible-playbook as u
 <pre>
 https://community.chocolatey.org/packages  
 </pre>
+
+## Lab - Copying file from Ansible Controller Machine to Windows Ansible Node using Ansible Playbook
+```
+cd ansible-sep-2023
+git pull
+cd Day4/windows-ansible-node
+ansible-playbook copy-file-playbook.yml
+```
+
+## Lab - Creating windows registry entry from ansible playbook
+```
+cd ansible-sep-2023
+git pull
+cd Day4/windows-ansible-node
+ansible-playbook create-registry-entry-playbook.yml
+```
+
+## Lab - Installing JDK, Maven, build application, create windows service and start service for custom build spring-boot appplication
+```
+cd ansible-sep-2023
+git pull
+cd Day4/windows-ansible-node
+ansible-playbook create-service-playbook.yml
+```
+
+## Lab - Install git for windows using ansible playbook
+```
+cd ansible-sep-2023
+git pull
+cd Day4/windows-ansible-node
+ansible-playbook install-git-for-windows-playbook.yml
+```
+
+## Lab - Install httpd web server in windows using ansible playbook
+```
+cd ansible-sep-2023
+git pull
+cd Day4/windows-ansible-node
+ansible-playbook install-httpd-in-windows-playbook.yml
+```
+
+## Lab - Rebooting windows machine
+```
+cd ansible-sep-2023
+git pull
+cd Day4/windows-ansible-node
+ansible-playbook reboot-windows-machine-playbook.yml
+```
+
+## Lab - Rebooting windows machine asynchronously without blocking
+```
+cd ansible-sep-2023
+git pull
+cd Day4/windows-ansible-node
+ansible-playbook reboot-windows-machine-async-poll-playbook.yml
+```
+
+## Lab - Error handling in ansible playbooks
+```
+cd ansible-sep-2023
+git pull
+cd Day4/windows-playbook-errorhandling
+ansible-playbook playbook.yml
+```
+
+## Lab - Loops and Jinja Templating in ansible playbooks
+```
+cd ansible-sep-2023
+git pull
+cd Day4/loops-and-jinja
+ansible-playbook playbook.yml
+```
+
+## Lab - Using regular expressions in ansible playbooks
+```
+cd ansible-sep-2023
+git pull
+cd Day4/regular-expressions
+ansible-playbook playbook.yml
+```

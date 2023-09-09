@@ -6,6 +6,14 @@ cd Day5/ansible-role
 ansible-playbook playbook.yml
 ```
 
+## Lab - Using Custom facts
+```
+cd ~/ansible-sep-2023
+git pull
+cd Day5/Custom-Facts
+ansible-playbook install-facts-playbook.yml
+```
+
 ## Installing Ansible Tower opensource
 https://medium.com/@jegan_50867/installing-ansible-tower-awx-e46d5231357d
 

@@ -1,0 +1,13 @@
+- name: This playbook will install nginx, configures custom path of web root folder and deploys custom web page
+  hosts: all
+  gather_facts: yes 
+
+  vars_files:
+  - custom-vars.yml
+
+  tasks:
+  - include: nginx-common-tasks.yml
+  - include: "install-nginx-{{ansible_distribution|lower}}.yml"
+  - include: "start-nginx-{{ansible_distribution|lower}}.yml"
+  - include: "configure-nginx-{{ansible_distribution|lower}}.yml"
+  - include: "restart-nginx-{{ansible_distribution|lower}}.yml"

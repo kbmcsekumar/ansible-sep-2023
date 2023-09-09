@@ -1,0 +1,12 @@
+- name: Check if nginx web server is already running in CentOS node
+  shell: curl localhost
+  register: output
+  ignore_errors: yes
+
+- debug: var=output
+
+- debug: msg="Task Failed = {{output.failed}}"
+
+- name: Start nginx web server in CentOS nodes
+  when: ( output.rc != 0)
+  shell: nginx

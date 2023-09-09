@@ -12,6 +12,8 @@
       fav_colour: Yellow
     - name: Manoj 
       fav_colour: Orange
+    - name: Nitesh 
+      fav_colour: Orange
 
   colours:
     - name: Blue

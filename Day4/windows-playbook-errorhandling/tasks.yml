@@ -1,4 +1,6 @@
 - debug: msg="Task1"
+
 - debug: msg="Task2"
+
 - name: Task with error
   win_shell: invalid-command

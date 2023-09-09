@@ -1,0 +1,4 @@
+---
+# handlers file for nginx
+- include: restart-nginx-centos.yml
+- include: restart-nginx-ubuntu.yml

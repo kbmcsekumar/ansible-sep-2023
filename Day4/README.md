@@ -307,14 +307,6 @@ cd Day4/windows-ansible-node
 ansible-playbook create-registry-entry-playbook.yml
 ```
 
-## Lab - Creating windows registry entry from ansible playbook
-```
-cd ansible-sep-2023
-git pull
-cd Day4/windows-ansible-node
-ansible-playbook create-registry-entry-playbook.yml
-```
-
 ## Lab - Installing JDK, Maven, build application, create windows service and start service for custom build spring-boot appplication
 ```
 cd ansible-sep-2023
@@ -331,15 +323,7 @@ cd Day4/windows-ansible-node
 ansible-playbook install-git-for-windows-playbook.yml
 ```
 
-## Lab - Install httpd in Windows using ansible playbook
-```
-cd ansible-sep-2023
-git pull
-cd Day4/windows-ansible-node
-ansible-playbook install-httpd-in-windows-playbook.yml
-```
-
-## Lab - Install git for windows using ansible playbook
+## Lab - Install httpd web server in windows using ansible playbook
 ```
 cd ansible-sep-2023
 git pull

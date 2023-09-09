@@ -362,3 +362,27 @@ git pull
 cd Day4/windows-ansible-node
 ansible-playbook reboot-windows-machine-async-poll-playbook.yml
 ```
+
+## Lab - Error handling in ansible playbooks
+```
+cd ansible-sep-2023
+git pull
+cd Day4/windows-playbook-errorhandling
+ansible-playbook playbook.yml
+```
+
+## Lab - Loops and Jinja Templating in ansible playbooks
+```
+cd ansible-sep-2023
+git pull
+cd Day4/loops-and-jinja
+ansible-playbook playbook.yml
+```
+
+## Lab - Using regular expressions in ansible playbooks
+```
+cd ansible-sep-2023
+git pull
+cd Day4/regular-expressions
+ansible-playbook playbook.yml
+```
